@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Master Thesis: The (hidden) Benefits of Monitoring</title>
+  <meta name="description" content="Master Thesis: The (hidden) Benefits of Monitoring">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  
+  
+  
+
+<meta name="author" content="Hauke C. Roggenkamp">
+
+
+<meta name="date" content="2018-11-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="Design.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="" target="blank"> The (hidden) Benefits of Monitoring</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="Design.html"><a href="Design.html"><i class="fa fa-check"></i><b>2</b> Design</a><ul>
+<li class="chapter" data-level="2.1" data-path="Design.html"><a href="Design.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="Design.html"><a href="Design.html#the-real-effort-task"><i class="fa fa-check"></i><b>2.2</b> The Real-Effort Task</a></li>
+<li class="chapter" data-level="2.3" data-path="Design.html"><a href="Design.html#implications"><i class="fa fa-check"></i><b>2.3</b> Implications</a></li>
+<li class="chapter" data-level="2.4" data-path="Design.html"><a href="Design.html#procedural-details"><i class="fa fa-check"></i><b>2.4</b> Procedural Details</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Predictions.html"><a href="Predictions.html"><i class="fa fa-check"></i><b>3</b> Behvioral Predictions</a><ul>
+<li class="chapter" data-level="3.1" data-path="Predictions.html"><a href="Predictions.html#the-self-interested-agents-expected-utility"><i class="fa fa-check"></i><b>3.1</b> The self-interested Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.2" data-path="Predictions.html"><a href="Predictions.html#the-reciprocal-agents-expected-utility"><i class="fa fa-check"></i><b>3.2</b> The Reciprocal Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.3" data-path="Predictions.html"><a href="Predictions.html#interim-conclusion"><i class="fa fa-check"></i><b>3.3</b> Interim Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Strategy.html"><a href="Strategy.html"><i class="fa fa-check"></i><b>4</b> Empirical Strategy</a></li>
+<li class="chapter" data-level="5" data-path="Analysis.html"><a href="Analysis.html"><i class="fa fa-check"></i><b>5</b> Analysis</a></li>
+<li class="chapter" data-level="6" data-path="Conclusion.html"><a href="Conclusion.html"><i class="fa fa-check"></i><b>6</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.econ.ku.dk/cee/" target="blank">Centre for Experimental Economics</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Master Thesis: The (hidden) Benefits of Monitoring</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Master Thesis: The (hidden) Benefits of Monitoring</h1>
+<p class="author"><em>Hauke C. Roggenkamp</em></p>
+<p class="date"><em>2018-11-06</em></p>
+</div>
+<div id="Intro" class="section level1">
+<h1><span class="header-section-number">Section 1</span> Introduction</h1>
+<p>How does monitoring affect the agents’ working morale? There is a wide-spread belief that monitoring spoils the working morale and therefore, comes at hidden costs. It might, for instance, be perceived as a lack of trust and trigger psychological costs. These psychological costs are then reciprocally passed back to the agent through a decreased effort provision <span class="citation">(Dickinson and Villeval <a href="#ref-Dickinson2008">2008</a>)</span>. Experiments (such as Falk’s and Kosfeld’s <span class="citation">(Falk and Kosfeld <a href="#ref-FalkKosfeld">2006</a>)</span>) that support this claim are often designed in a way that the data could not possibly support other conclusions.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> While Falk and Kosfeld designed an experiment in which the principals restrict the agents’ autonomy, there also is a growing number of studies that model several other control devices, namely “managerial attention”, “supervision”, “verification” or “monitoring” <span class="citation">(Schulze and Frank <a href="#ref-Schulze2003">2003</a>; Guerra <a href="#ref-Guerra">2002</a>; Dickinson and Villeval <a href="#ref-Dickinson2008">2008</a>)</span>. Their experimental setup is similar to the one of Falk and Kosfeld as they allow the application of these devices to only be perceived as a breach of trust.</p>
+<p>While we acknowledge that all these management practices (to which I henceforth refer as “monitoring”) may have detrimental effects on the agents’ working morale, we also believe that they might be perceived as fair so that could also motivate the agent intrinsically. We argue that monitoring helps to receive high quality signals of the agent’s performance and therefore minimizes the problem of incorrectly receiving bad performance signals. Monitoring can thus also be seen as a good management practice <span class="citation">(Halac and Prat <a href="#ref-HalacPrat">2016</a>)</span> that helps to make legitimate decisions relating to the assignment of prestigious projects, salary negotiations, promotions . Furthermore, employees might be more motivated if they know that these decisions are made on the basis of a valid performance assessment instead of arbitrary characteristics such as the employee’s tenure <span class="citation">(Bloom and Van Reenen <a href="#ref-BloomQJE2007">2007</a>, 1356)</span>. In our view, the belief that monitoring, if anything, spoils the working morale is too narrowly considered since it does not cover this positive dimension sufficiently. That is not to say that we believe monitoring to have positive effects . Instead, we argue that the circumstances determine whether monitoring is perceived as kind or unkind. To study a more nuanced view, we designed a laboratory experiment that allows for both (kind and unkind) perceptions. While this enables us to investigate hidden costs in form of a low level of effort provision (due to perceived unkindness that is reciprocally passed back to the principal) the design also allows us to search for hidden  of monitoring – at least to some extend.</p>
+<p>The idea that the same action is perceived as legitimate in some scenarios while it is perceived as unjust in others is not new. A price increase, for instance, seems to be only perceived as unkind if the producer’s costs did not increase <span class="citation">(Okun <a href="#ref-Okun">2011</a>)</span>. Similarly, it is perceived as unjust to cut wages if the employer’s wellbeing is not at stake. If it was at risk however, employees might accept it <span class="citation">(Kahneman, Knetsch, and Thaler <a href="#ref-Kahneman">1986</a>)</span>. Finally, and more related to this thesis, the employer’s control seems to crowd-out the employees intrinsic motivation to supply labor if it is not legitimate, that is, if it does not prevent antisocial behavior <span class="citation">(Schnedler and Vadovic <a href="#ref-Legitimacy">2011</a>)</span>. The restriction of internet or social media access in a small sized family business may be perceived as unjust as it signals distrust. The same policy might, however, be perceived as neutral in the setting of a large multi-national firm, where the inter-personal ties are weaker and the risk of selfish behavior is higher. Similarly <span class="citation">(Barkma <a href="#ref-Barkema">1995</a>)</span> and <span class="citation">(Frey <a href="#ref-Frey1993">1993</a>)</span> find suggesting evidence that the monitoring of hours worked can crowd-out the workers’ motivation (and performance) if the monitoring principal was their own CEO while it has positive effects on their performance if the principal was a distant parent company. These studies, amongst others, suggest that one and the same action can be moderated by another variable that determines how this particular action is perceived. In our experiment, we identify the agent’s productivity as such a variable.</p>
+<p>To put it in a nutshell, our intention was to create situations in which overachievers, in contrast to layabouts, appreciate to be monitored and reciprocate this sense of appreciation. We therefore analyze the effect of the interaction of monitoring and the agents’ productivity on the agent’s working morale. To do so, we implemented an experimental principal-agent game in which the agent supplied labor in a real-effort task. This was costly for her but generated profit for the principal. Importantly, the principal, who paid the agent’s salary was not able to directly observe the agent’s output. Instead, the principal chose one out of two available mechanisms that we interpret as attention technology and thus, as monitoring. The chosen mechanism generated the agent’s salary. Under both mechanisms, the agent’s salary consisted of a flat wage and the chance to also receive a bonus payment. While the random mechanism flipped a virtual coin to determine whether the agent receives the bonus, the performance-based mechanism was more likely to pay out the bonus the higher the agent’s performance was. Choosing the performance-based mechanism was, in a metaphorical sense, like observing the movements of the agent to make the bonus decision – the better her performance, the better the principal’s impression of her work, the likelier it becomes that she receives the bonus if she worked well. The choice of the random mechanism is, in contrast, interpreted as a complete lack of monitoring: the principal had no impression of her work such that the agent’s earnings must be determined randomly. The random mechanism therefore sent completely arbitrary performance signals that determined the agent’s earnings and were likely to be incorrect. Monitoring consequently was valuable to the principal as it incentivized the agent to exert effort. In addition, it was beneficial for agents, who expected to perform well because it yielded better chances to earn the bonus than the coin flip. In contrast, it was disadvantageous for layabouts, who could hope for a lucky outcome of the the random mechanism’s coin flip.</p>
+<p>An important feature of our design is that both the principal and the agent received an objective assessment of the agent’s  (or “talent”) before the principal decided whether to monitor the agent. This assessment was based on the exact same task, which the two players executed in a previous stage of the experiment. In addition, both mechanisms avoided ex post hold-up problems because they were a function of a performance signal. A principal could thus, only decide on the signal’s quality but not on the eventual payment she had to offer the agent. Consequently, we modeled a situation of complete contracts. Another important feature was that the agent learned the principal’s choice of the mechanism before she worked for the principal, that is, whether the principal paid attention or not. We exploit these two features to analyze whether an agent provided more effort than her productivity would suggest if the principal chose the mechanism that was beneficial to the agent. In addition, we are interested in the agents’ behavior if the principal chose the mechanism that was disadvantageous to them. In the latter case, we hypothesized them to provide less effort than one would expect (given their productivity). If this was the case, the “wrong” monitoring decision would have detrimental effects on the agent’s working morale – . In contrast, the “right” choice would yield . The rational principal might then have an incentive not to pay attention to the agent’s work, that is, to choose the random mechanism, albeit provoking a moral hazard.</p>
+<p>The results are mixed. They do not support the hypothesis that agents react kindly to monitoring.[^This might, however, be due to the experimental design: While it was easy to exert low levels of effort, it was hard to go beyond one’s boundaries which were set by the individual productivity.] We therefore find no evidence for hidden benefits of monitoring. The hidden costs of monitoring, however, are present in our data. We find that the average unproductive agent decreases her effort provision by about three to twelve percentage points, if monitored. Although it should not be interpreted as a causal effect of monitoring, the data also show that principals who monitored the agents realized higher payoffs. The discrepancy between hidden costs on the one hand and higher payoffs on the other hand cannot be explained by higher performances. Instead, it might be a result of chance (despite the significant p-value). Furthermore, and as predicted, the data also suggest that these hidden costs disappear for productive agents who benefit from monitoring. The latter observation, however, depends on the subset of data and methods applied. After all, the fraction of productive agents, who refused to supply effort while being monitored is relatively low. The unfirm robustness of the results calls for a continued data collection as well as an additional, refined treatment.</p>
+<p>Investigating a more nuanced picture of the hidden effects of control helps to investigate management styles and their effect on the firms’ productivities, profitabilities and survival rates <span class="citation">(Bloom and Van Reenen <a href="#ref-BloomQJE2007">2007</a>)</span>. <span class="citation">(Gibbons and Roberts <a href="#ref-gibbons2012">2012</a>, ch.~17)</span> as well as <span class="citation">(Bartelsman and Doms <a href="#ref-BartelsmanDoms2000">2000</a>)</span> and <span class="citation">(Syverson <a href="#ref-Syverson">2011</a>)</span> review a variety of studies and conclude that there are persistent performance differences across seemingly similar enterprises that may, in part, be explained by managerial skills and practices. Micromanagement might, for instance, have detrimental effects by eroding the workers’ motivation <span class="citation">(Foss <a href="#ref-Micromanagement">2003</a>)</span>. We aim to identify monitoring as a management practice that affects the agent’s working morale conditional on her characteristics. As such, we investigate whether monitoring is a practice that (1) may explain some of the performance differences across firms and that (2) requires skilled managers who are able to identify who benefits or suffers from their attention.</p>
+
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Dickinson2008">
+<p>Dickinson, David, and Marie-Claire Villeval. 2008. “Does Monitoring Decrease Work Effort?: The Complementarity Between Agency and Crowding-Out Theories.” <em>Games and Economic Behavior</em> 63 (1). Elsevier: 56–76.</p>
+</div>
+<div id="ref-FalkKosfeld">
+<p>Falk, Armin, and Michael Kosfeld. 2006. “The Hidden Costs of Control.” <em>American Economic Review</em> 96 (5): 1611–30. <a href="https://doi.org/10.1257/aer.96.5.1611">https://doi.org/10.1257/aer.96.5.1611</a>.</p>
+</div>
+<div id="ref-Schulze2003">
+<p>Schulze, Günther G., and Björn Frank. 2003. “Deterrence Versus Intrinsic Motivation: Experimental Evidence on the Determinants of Corruptibility.” <em>Economics of Governance</em> 4 (2): 143–60. <a href="https://doi.org/10.1007/s101010200059">https://doi.org/10.1007/s101010200059</a>.</p>
+</div>
+<div id="ref-Guerra">
+<p>Guerra, Gerardo A. 2002. “Crowding Out Trust: The Adverse Effects of Verification. An Experiment.” Economics Series Working Papers 98. University of Oxford, Department of Economics.</p>
+</div>
+<div id="ref-HalacPrat">
+<p>Halac, Marina, and Andrea Prat. 2016. “Managerial Attention and Worker Performance.” <em>American Economic Review</em> 106 (10): 3104–32. <a href="https://doi.org/10.1257/aer.20140772">https://doi.org/10.1257/aer.20140772</a>.</p>
+</div>
+<div id="ref-BloomQJE2007">
+<p>Bloom, Nicholas, and John Van Reenen. 2007. “Measuring and Explaining Management Practices Across Firms and Countries*.” <em>The Quarterly Journal of Economics</em> 122 (4): 1351–1408. <a href="https://doi.org/10.1162/qjec.2007.122.4.1351">https://doi.org/10.1162/qjec.2007.122.4.1351</a>.</p>
+</div>
+<div id="ref-Okun">
+<p>Okun, Arthur M. 2011. <em>Prices and Quantities: A Macroeconomic Analysis</em>. Brookings Institution Press.</p>
+</div>
+<div id="ref-Kahneman">
+<p>Kahneman, Daniel, Jack L. Knetsch, and Richard Thaler. 1986. “Fairness as a Constraint on Profit Seeking: Entitlements in the Market.” <em>The American Economic Review</em> 76 (4). American Economic Association: 728–41.</p>
+</div>
+<div id="ref-Legitimacy">
+<p>Schnedler, Wendelin, and Radovan Vadovic. 2011. “Legitimacy of Control.” <em>Journal of Economics and Management Strategy</em> 20 (4): 985–1009.</p>
+</div>
+<div id="ref-Barkema">
+<p>Barkma, HarryG. 1995. “Do Top Managers Work Harder When They Are Monitored?” <em>Kyklos</em> 48 (1). Blackwell Publishing Ltd: 19–42. <a href="https://doi.org/10.1111/j.1467-6435.1995.tb02313.x">https://doi.org/10.1111/j.1467-6435.1995.tb02313.x</a>.</p>
+</div>
+<div id="ref-Frey1993">
+<p>Frey, Bruno S. 1993. “Does Monitoring Increase Work Effort? The Rivalry with Trust and Loyalty.” <em>Economic Inquiry</em> 31 (4). Wiley Online Library: 663–70.</p>
+</div>
+<div id="ref-gibbons2012">
+<p>Gibbons, Robert, and John Roberts. 2012. <em>The Handbook of Organizational Economics</em>. Princeton University Press.</p>
+</div>
+<div id="ref-BartelsmanDoms2000">
+<p>Bartelsman, Eric J., and Mark Doms. 2000. “Understanding Productivity: Lessons from Longitudinal Microdata.” <em>Journal of Economic Literature</em> 38 (3): 569–94. <a href="https://doi.org/10.1257/jel.38.3.569">https://doi.org/10.1257/jel.38.3.569</a>.</p>
+</div>
+<div id="ref-Syverson">
+<p>Syverson, Chad. 2011. “What Determines Productivity?” <em>Journal of Economic Literature</em> 49 (2): 326–65. <a href="https://doi.org/10.1257/jel.49.2.326">https://doi.org/10.1257/jel.49.2.326</a>.</p>
+</div>
+<div id="ref-Micromanagement">
+<p>Foss, Nicolai J. 2003. “Selective Intervention and Internal Hybrids: Interpreting and Learning from the Rise and Decline of the Oticon Spaghetti Organization.” <em>Organization Science</em> 14 (3): 331–49. <a href="https://doi.org/10.1287/orsc.14.3.331.15166">https://doi.org/10.1287/orsc.14.3.331.15166</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>See <span class="citation">(Siemens <a href="#ref-SiemensJEBO2013">2013</a>; Schnedler and Vadovic <a href="#ref-Legitimacy">2011</a>; Masella, Meier, and Zahn <a href="#ref-GroupIdentity">2014</a>)</span> for further references that analyzed their experimental design.<a href="index.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="Design.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"text": "Edit"
+},
+"download": ["gitBook.pdf", "gitBook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

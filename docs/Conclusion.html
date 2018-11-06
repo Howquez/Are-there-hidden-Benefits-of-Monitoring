@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Master Thesis: The (hidden) Benefits of Monitoring</title>
+  <meta name="description" content="Master Thesis: The (hidden) Benefits of Monitoring">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  
+  
+  
+
+<meta name="author" content="Hauke C. Roggenkamp">
+
+
+<meta name="date" content="2018-11-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="Analysis.html">
+<link rel="next" href="references.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="" target="blank"> The (hidden) Benefits of Monitoring</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="Design.html"><a href="Design.html"><i class="fa fa-check"></i><b>2</b> Design</a><ul>
+<li class="chapter" data-level="2.1" data-path="Design.html"><a href="Design.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="Design.html"><a href="Design.html#the-real-effort-task"><i class="fa fa-check"></i><b>2.2</b> The Real-Effort Task</a></li>
+<li class="chapter" data-level="2.3" data-path="Design.html"><a href="Design.html#implications"><i class="fa fa-check"></i><b>2.3</b> Implications</a></li>
+<li class="chapter" data-level="2.4" data-path="Design.html"><a href="Design.html#procedural-details"><i class="fa fa-check"></i><b>2.4</b> Procedural Details</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Predictions.html"><a href="Predictions.html"><i class="fa fa-check"></i><b>3</b> Behvioral Predictions</a><ul>
+<li class="chapter" data-level="3.1" data-path="Predictions.html"><a href="Predictions.html#the-self-interested-agents-expected-utility"><i class="fa fa-check"></i><b>3.1</b> The self-interested Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.2" data-path="Predictions.html"><a href="Predictions.html#the-reciprocal-agents-expected-utility"><i class="fa fa-check"></i><b>3.2</b> The Reciprocal Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.3" data-path="Predictions.html"><a href="Predictions.html#interim-conclusion"><i class="fa fa-check"></i><b>3.3</b> Interim Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Strategy.html"><a href="Strategy.html"><i class="fa fa-check"></i><b>4</b> Empirical Strategy</a></li>
+<li class="chapter" data-level="5" data-path="Analysis.html"><a href="Analysis.html"><i class="fa fa-check"></i><b>5</b> Analysis</a></li>
+<li class="chapter" data-level="6" data-path="Conclusion.html"><a href="Conclusion.html"><i class="fa fa-check"></i><b>6</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.econ.ku.dk/cee/" target="blank">Centre for Experimental Economics</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Master Thesis: The (hidden) Benefits of Monitoring</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Conclusion" class="section level1">
+<h1><span class="header-section-number">Section 6</span> Conclusion</h1>
+<p>In a simple real-effort laboratory experiment, we tested whether monitoring has hidden effects on the agents’ working morale. Intention-based reciprocity models predict that unproductive agents dislike being monitored and suffer psychological costs that they pass back to the monitoring principal, even if this is costly for them. Productive agents, in contrast, are predicted to benefit from the principals’ attention and to put more effort into a productive task to express their gratitude. The standard model that assumes agents to be purely self-interested yields the prediction that the agents’ performance should not be affected if they were monitored in our experimental setting.</p>
+<p>The data we gathered in the first eight sessions do not find any apparent net-costs or net-benefits of monitoring. It furthermore rejects predictions that are based on the standard model because agents who were monitored perform worse than expected. Interestingly, they do not perform any better than those agents who were not monitored and thus, did not face any material incentives to exert effort at all. While we do not find hidden benefits of monitoring, the data suggests that monitoring triggers hidden costs and that these costs are moderated by an agent’s productivity.All in all, one can thus conclude that our data is neither perfectly in line with my predictions nor do they strongly dissent from them. That we do not find any hidden benefits that mirror the predicted pattern might also be a flaw of the experimental design: While it was relatively easy to restrain the labor supply in Stage 2, it was more difficult to excel (due to a kind principal or “good management practices”).</p>
+<p>But even without hidden benefits, our results contribute to understanding the adverse effects of monitoring. They support findings from the crowding-out literature only partly and demonstrate that monitoring does not trigger psychological costs <em>per se</em>: Yes, monitoring spoils some agents’ working morale <em>but only</em> under the condition that they feel disadvantaged by the attention. This thesis thus objects the idea that monitoring is perceived as a lack of trust that triggers psychological costs and is reciprocated. Likewise, it casts doubt that intrinsic motivation (other than the psychological payoff discussed in this thesis) is crowded out. Instead, monitoring appears to be one of those actions that are perceived as legitimate under certain conditions while they seem unjustly otherwise. It occurs to be a management practice that requires skilled managers, who can assess who is likely to suffer from monitoring and who is unlikely to do so. Under careful considerations, a skilled manager could then minimize the hidden costs of monitoring that other (less talented) managers do not see. A nuanced employment of monitoring might then be one of the differences of successful firms that are seemingly comparable to the less successful ones.</p>
+<p>Recall that these conclusions are based on data that is strongly influenced by only three data points. Whether additional data stemming from an identical experimental design can remove the ambiguities remains unclear. A post-hoc power analysis suggests that it might be reasonable to collect more data. However, it might make more sense to evaluate the experiment’s setup to identify design flaws. Without changing the main features of the experiment, the design can easily be adjusted for future research to get a more comprehensive understanding of whether and how reciprocity affects the working morale. I conclude this thesis with several suggestions:</p>
+<p><strong>Comparative Statics.</strong> The theory I derived in Chapter XY is based on several exogenous factors that can be manipulated by the experimenters. This allows us to follow a comparative statics approach: We change one of these factors and observe whether the results move in the same directions as the outlined theory predicts. We could, for instance, manipulate <span class="math inline">\(q\)</span> which I interpret as the important threshold that assigns agents to the productive or unproductive group. A variation in this parameter would thus change the definition of agents who felt treated kindly and unkindly. If the newly generated data was in line with the corresponding prediction, we would end up with further support. Likewise we could change the principals’ payment function. This would affect the leverage of expressing reciprocity.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></p>
+<p><strong>Control Condition.</strong> Because we did not run a control condition with a separate set of participants, the analysis is based on postulates that allow a within-subject design. By definition, these postulates cannot be tested with our data at hand, which is why we can never be sure that they are reasonable. However, one could generate new data to either reject these postulates as unreasonable or to support them by letting participants play the first stage twice. This way, one would measure their productivity under identical conditions twice. This would allow us to test whether the ability, productivity or costs of effort (I use these terms interchangeably) are indeed separable across time. A second and more expensive approach would be to design a control treatment that is identical to the second stage except that each participant slips into the role of an agent and plays against an artificial principal. As the principal then has no intentions, reciprocity cannot emerge. The advantage of the latter suggestion is that we would end up with <em>ceteribus paribus</em> comparisons. The disadvantage is that it prunes observations (because we are not yet interested in the behavior following the choice of the random mechanism).</p>
+<p><strong>Comprehension.</strong> The experiment was framed in a neutral and thus abstract way. As it took more than 40 minutes for some participants to read (and hopefully understand) the instructions to answer the control question, one can reasonably suspect that not all of the participants understood the strategic environment they later found themselves in. Without changing the neutrality of the instructions’ framing, one can adjust the instructions in at least two ways: First, one can conduct the sessions in a laboratory that manages a native subject pool and translate the instructions into the corresponding language. Second, the instructions could be framed a little more abstract, yet more visually. One could, for instance, describe the performance-based mechanism as a process in which a ball is drawn from a bin that contains red and green colored balls. If the drawn ball is red, the agent receives 225 DKK and 150 DKK otherwise. The performance of the agent then determines how many green balls are located within the container.</p>
+<p><strong>Regression Discontinuity Dedign.</strong> A fourth suggestion applies to the less conclusive empirical strategy applied in this thesis – the regression discontinuity design. One can argue that it did not yield any insights because the theory did not predict any discontinuities that could potentially be exploited. More importantly, there is not enough data around the threshold that could be exploited. The scatterplots indicate that we can influence the agents’ productivity fairly well by manipulating the time each screen is displayed.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> This means that we could manipulate the screen time such that there are many observations around the threshold. In addition, we could re-design the material incentives such that we would expect a discontinuous jump around the threshold. Because the discontinuity should only affect the psychological payoff and not the material payoff, this becomes a little more tricky however: If we changed the payoffs following the performance-based mechanism, for instance, we would design the material incentives so that they are discontinuous. One could then argue that a discontinuity in the observed behavior was predicted by the standard model as well and necessarily caused by reciprocity. If we only changed the material payoff of the random mechanism instead, we would indeed alter the perceived kindness without touching the material incentives of the performance-based mechanism. However, we would end up without the predicted discontinuity, given the fairness norm the standard model assumes. Hence, to predict a discontinuity, we might have to adjust the fairness norm correspondingly. Anotherdownside of this approach is that it complicates the interpretation of the principal’s choice as monitoring even further.</p>
+<p><strong>Expression of Kindness</strong> The current design allows agents to reduce their workload. We have seen that this is a powerful tool as none of those agents who chose to work on the maximum amount of screens actually decreased their effort provision. It might therefore be a commitment device to follow through on impulsive and reciprocal strategies. While it was easy to reduce the performance by not supplying any effort, it might have been hard to increase it by the same amount (as illustrated in Figure XY. Even determined agents might thus benefit from the opportunity to increase their workload as a response to the principal’s choice. It is not clear-cut what the standard model would predict the productive agents to do in this case.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>. But as the standard model would predict all agents to behave similarly, it would stand in contrast to the intention-based reciprocity model, which would predict none of the unproductive agents to increase their workload. Because the design would make it easier for agents to express kindness (“on the right side of the threshold”) while it does not affect the expression of unkindness (“on the left side of the threshold”) the regression line depicted in Figure XY is expected to become steeper. In fact, I already implemented this suggestion into the code which can be found in the <a href="https://github.com/Howquez/The-hidden-Benefits-of-Monitoring/tree/master/Software">online Appendix</a>. To avoid ambiguities with respect to the standard model’s predictions, one could adjust the experiment a little further: One could design the extended workload such that it does not affect the agents’ prospects to earn the bonus payment. In a real-world setting, one could translate such a design as unpaid overtime.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
+
+</div>
+<div class="footnotes">
+<hr />
+<ol start="21">
+<li id="fn21"><p>In the extreme case, a principal’s earnings were not affected by the agent’s performance. This would resemble the “artificial principal” suggestion I made above but would be even more expensive as we also had to pay the principal.<a href="Conclusion.html#fnref21" class="footnote-back">↩</a></p></li>
+<li id="fn22"><p>If you focus on the productive agents in Figure XY you will see that they are scattered around <span class="math inline">\(Y_1\simeq0.6\)</span>.<a href="Conclusion.html#fnref22" class="footnote-back">↩</a></p></li>
+<li id="fn23"><p>One could argue that the additional workload makes it easier for the agents to exert effort. This would translate into lower costs of effort and a higher equilibrium effort provision. In contrast, one could also argue that the equilibrium (predicted by the standard model) should not be affected by an extended workload as the agents already supplied their optimal level of effort.<a href="Conclusion.html#fnref23" class="footnote-back">↩</a></p></li>
+<li id="fn24"><p>Another approach might be to not only think about the quantity of the agent’s labor supply but also about its <em>quality</em>. Suppose that the principal sells the agent’s labor supply in the form of some good. The higher the quality of the good, the higher the principal’s earnings. This means that we could give the agent the possibility to determine the amount of money the principal earns with each percentage point of boxes the agent clicked away. Agents who intend to reciprocate kindness but fail to provide more effort than in the first stage could then easily express their kindness by increasing the quality (worth) of their effort. This would also increase the ease of expressing unkindness. However, this adjustment might make the estimation of reciprocity more blurry if agents choose qualities and quantities that offset each other. In addition, one has to think about the agents’ costs of the quality choice so that one can translate it into a convincing story.<a href="Conclusion.html#fnref24" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-Conclusion.Rmd",
+"text": "Edit"
+},
+"download": ["gitBook.pdf", "gitBook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

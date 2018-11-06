@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Master Thesis: The (hidden) Benefits of Monitoring</title>
+  <meta name="description" content="Master Thesis: The (hidden) Benefits of Monitoring">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  
+  
+  
+
+<meta name="author" content="Hauke C. Roggenkamp">
+
+
+<meta name="date" content="2018-11-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="Design.html">
+<link rel="next" href="Strategy.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="" target="blank"> The (hidden) Benefits of Monitoring</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="Design.html"><a href="Design.html"><i class="fa fa-check"></i><b>2</b> Design</a><ul>
+<li class="chapter" data-level="2.1" data-path="Design.html"><a href="Design.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="Design.html"><a href="Design.html#the-real-effort-task"><i class="fa fa-check"></i><b>2.2</b> The Real-Effort Task</a></li>
+<li class="chapter" data-level="2.3" data-path="Design.html"><a href="Design.html#implications"><i class="fa fa-check"></i><b>2.3</b> Implications</a></li>
+<li class="chapter" data-level="2.4" data-path="Design.html"><a href="Design.html#procedural-details"><i class="fa fa-check"></i><b>2.4</b> Procedural Details</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Predictions.html"><a href="Predictions.html"><i class="fa fa-check"></i><b>3</b> Behvioral Predictions</a><ul>
+<li class="chapter" data-level="3.1" data-path="Predictions.html"><a href="Predictions.html#the-self-interested-agents-expected-utility"><i class="fa fa-check"></i><b>3.1</b> The self-interested Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.2" data-path="Predictions.html"><a href="Predictions.html#the-reciprocal-agents-expected-utility"><i class="fa fa-check"></i><b>3.2</b> The Reciprocal Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.3" data-path="Predictions.html"><a href="Predictions.html#interim-conclusion"><i class="fa fa-check"></i><b>3.3</b> Interim Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Strategy.html"><a href="Strategy.html"><i class="fa fa-check"></i><b>4</b> Empirical Strategy</a></li>
+<li class="chapter" data-level="5" data-path="Analysis.html"><a href="Analysis.html"><i class="fa fa-check"></i><b>5</b> Analysis</a></li>
+<li class="chapter" data-level="6" data-path="Conclusion.html"><a href="Conclusion.html"><i class="fa fa-check"></i><b>6</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.econ.ku.dk/cee/" target="blank">Centre for Experimental Economics</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Master Thesis: The (hidden) Benefits of Monitoring</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Predictions" class="section level1">
+<h1><span class="header-section-number">Section 3</span> Behvioral Predictions</h1>
+<blockquote>
+<p>“To create a model, then, we make choices about what’s important enough to include, simplifying the world into a toy version that can be easily understood and from which we can infer important facts and actions.”
+— <span class="citation">(O’Neil <a href="#ref-MathDestruction">2017</a>)</span></p>
+</blockquote>
+<p>We implemented a simple real-effort task where a participant’s actions affected only her own payments in the first stage. We then adapted the game to a principal-agent setting in Stage 2. Because we are interested in social preferences, I focus on the second stage in what follows (and touch on the first stage whenever it eases the comprehension).</p>
+<p>The behavioral predictions for our experiment depend on the subjects’ preferences and the corresponding assumptions. I consider two cases: One in which agents are self-interested, that is, they are only interested in maximizing their own utilities, and one where they have social preferences that are described by models of intention-based sequential reciprocity. I predict that self-interested agents, who are exposed to the performance-based mechanism, supply similar levels of effort in Stage 2 as in Stage 1. Reciprocal agents, in contrast, are predicted to deviate from their first stage effort provision. Note that we are not interested in the standard case in and of itself – it simply serves as a reference point to contrast the intention-based reciprocity predictions.</p>
+<p>The principals’ preferences do not affect the empirical analyses of the agents’ behavior much. For this reason, I assume them to be self-interested throughout the whole analysis and do not focus on their decisions in this thesis. I derive the predictions for the standard case, the self-interested preferences, first before I move to the reciprocity driven social preferences.
+To reiterate, the setup in Stage 2 depicted in Figure XY is the following: The principal (<span class="math inline">\(j\)</span>) decides whether she monitors the agent by choosing a mechanism that determines her payment. I refer to this variable as <span class="math inline">\(\mu \in (\text{random, performance})\)</span> where I abbreviate the random mechanism with <span class="math inline">\(\rho\)</span> and the performance-based mechanism with <span class="math inline">\(\varphi\)</span> to improve the readability of the formal expressions in what follows.
+The agent, by contrast, has two choice variables: <span class="math inline">\(n\)</span>, which is her workload measured as the number of screens she intends to work on, and her performance <span class="math inline">\(l \in [0,1]\)</span>, with a ceiling determined by her choice of <span class="math inline">\(n\)</span> with <span class="math inline">\(\{ n \in \mathbb{R}^{+} | 1 \leq n \leq 25 \}\)</span>. <span class="math inline">\(c(l)\)</span> describes her costs of providing effort. Agents are paid a fixed salary <span class="math inline">\(w\)</span> and might receive an additional bonus payment <span class="math inline">\(b\)</span>. In case the payment is not performance-based (<span class="math inline">\(\mu \neq \varphi\)</span>), the agent receives a payment which is determined in a random procedure (<span class="math inline">\(\mu = \rho\)</span>), where she receives the bonus payment with an exogenously set probability of <span class="math inline">\(q \equiv \frac{1}{2}\)</span>. For each percentage point of the total number of boxes clicked away (which is the exact definition of <span class="math inline">\(l\)</span>), the principal receives one DKK such that she will be paid a <em>relative</em> “piece rate” of <span class="math inline">\(l\)</span> DKK. In addition, she receives a fixed payment of <span class="math inline">\(\varepsilon \equiv 340\)</span> DKK to avoid bankruptcies.</p>
+<p>Since the last mover is <em>0</em> (<em>chance</em>), the game’s final actions are explicit randomizations. I assume that the other two (human) players will not solely focus on the specific realizations of payoffs but calculate their <em>expected</em> monetary payoffs to develop their behavioral strategies. Stylizing this thought, one can imagine a reduced form <em>two</em>-player game as illustrated below in Figure XY. This assumption ultimately has an attribution theory style implication as participants who think in expected payoffs do not blame chance for particularly low outcomes that might occur. Instead, agents hold their matched principal accountable for the relatively high or low <em>expected</em> outcome they are facing.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/20171127_GameTree&quot;</span>)</code></pre>
+<p>To describe the agent’s behavior (I focus on the eventual effort provision <span class="math inline">\(l\)</span> and neglect the workload decision <span class="math inline">\(n\)</span>), I consider a standard model of effort provision with a utility function, that is separable in the subject’s utility from her payment <span class="math inline">\(\pi \in (w, w+b)\)</span>, her costs <span class="math inline">\(c(l)\)</span> stemming from her effort provision and her intrinsic motivation <span class="math inline">\(\sigma \in (0, 1)\)</span> she derives from working on the task.</p>
+<div id="the-self-interested-agents-expected-utility" class="section level2">
+<h2><span class="header-section-number">3.1</span> The self-interested Agent’s Expected Utility</h2>
+<p>I start by deriving an agent’s motives to exert effort by analyzing the strategic environment every participant (agents and principals) faces in the first stage. For simplicity, I focus on a representative (that is, homogenous) agent’s (<span class="math inline">\(i\)</span>’s) motives as they can easily be transferred to a principal. Like in Stage 2, each agent is rewarded with a flat wage. Whether the agent receives the bonus is determined by a performance-based mechanism that is identical to the one the principal can choose in Stage 2. The first stage’s effort provision <span class="math inline">\(l^{1^{st}}\)</span> is an independent measure of effort provision as it stems from a two-player game where only one human participant interacts with an artificial chance player. As mentioned, I refer to <span class="math inline">\(l^{1^{st}}\)</span> as <em>productivity</em>. In conclusion, one can stylize the game in Stage 1 as follows: the higher a participant’s productivity, the higher the likelihood of receiving the bonus payment. Formally:</p>
+<p><span class="math display">\[
+\mathbb{E}[\pi_i^{1^{st}}(l)] = l(w+b) + (1-l)w = w + l \cdot b
+\]</span></p>
+<p>Considering a participant’s costs of effort as well as her intrinsic motivation one can derive her utility function and solve the maximization problem:</p>
+<p><span class="math display">\[
+    U_i(l, c(\cdot), \sigma)        =  w + l \cdot b - c(l) + \sigma \cdot l\\
+    \Rightarrow c_l(l^{1^{st}}) = b + \sigma\\
+    \Leftrightarrow l^{1^{st}}  = c_l^{-1}(b + \sigma)
+\]</span></p>
+<p><span class="math inline">\(c_l(\cdot)\)</span> thereby denotes the derivative of the cost function with respect to the effort level <span class="math inline">\(l\)</span> (the marginal costs of effort) and <span class="math inline">\(c_l^{-1}(\cdot)\)</span> denotes the inverse of the marginal cost function. Because <span class="math inline">\(c(l)\)</span> is assumed to be convex, <span class="math inline">\(c_l(l)\)</span> is increasing and so is its inverse <span class="math inline">\(c_l^{-1}(\cdot)\)</span>. From here it follows that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(l^{1^{st}}\)</span> increases in the intrinsic as well as the variable extrinsic motivation and that</li>
+<li>a self-interested subject chooses effort up to the point where the sum of both (intrinsic and variable extrinsic motivation) equals her marginal costs of effort.</li>
+</ol>
+<p>In the second stage, the agent’s expected monetary payoff is slightly more complex since it does not only depend on her own effort in Stage 2, <span class="math inline">\(l^*\)</span>, (which I call her <em>performance</em>) but also on another variable: the principal’s binary monitoring decision. We’ll therefore have to consider two cases resulting from either a random (<span class="math inline">\(\rho\)</span>) or a performance-based mechanism (<span class="math inline">\(\varphi\)</span>).</p>
+<p><span class="math display">\[
+    \mathbb{E}[\pi_i(l)|\rho]        = q(w+b)+(1-q)w\\
+                        = w + q \cdot b\\
+    \mathbb{E}[\pi_i(l)|\varphi] = \mathbb{E}[\pi_i^{1^{st}}(l)]\\
+                        = w + l \cdot b
+\]</span></p>
+<p>These two functions, along with the principal’s expected monetary payoff, are visualized in an interactive <em>ShinyApp</em> I programmed and archived <a href="https://roggenkamp.shinyapps.io/shiny_expectations">here</a>.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> Adding the costs of effort as well as the intrinsic motivation yields the following first-order conditions:</p>
+<p><span class="math display">\[
+    \frac{\partial U_i}{\partial l} = 
+        \begin{cases}
+            \sigma - c_l(l) \ \Rightarrow \sigma = c_l(l^*_\rho)  &amp; 
+            \Leftrightarrow l^*_\rho = c_l^{-1}(\sigma)\\
+            b + \sigma - c_l(l) \ \Rightarrow b + \sigma = c_l(l^*_\varphi)  &amp; 
+            \Leftrightarrow l^*_\varphi = c_l^{-1}(b +\sigma) = l^{1^{st}}
+        \end{cases}
+\]</span></p>
+<p>Hence, the agent will choose effort up to the point where the sum of her intrinsic and variable extrinsic motivation, if any, equals her marginal costs of effort. Because <span class="math inline">\(c_l^{-1}(\cdot)\)</span> is increasing and because <span class="math inline">\(b&gt;0\)</span>, it follows that <span class="math inline">\(l^*_\varphi \geqslant l^*_\rho\)</span>. In summary, I predict that:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/00_Self_Prediction.pdf&quot;</span>)</code></pre>
+<blockquote>
+<p>A purely-self interested agent’s performance, given a performance-based mechanism, will equal her productivity.</p>
+<p>A purely-self interested agent will perform better (that is, she will click on more boxes) if she faces the performance-based instead of the random mechanism.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>
+```</p>
+</blockquote>
+<p>These predictions are conceptualized in Figure XY where the yellow line could have any non-negative slope (which is defined by <span class="math inline">\(\sigma\)</span>). However, they hinge on the implicit assumptions that (1) an agent does neither learn (thus improve her ability to perform the box clicking task) nor fatigue (thus worsen her ability) and that (2) <span class="math inline">\(\sigma\)</span> does not depend on the mechanism <span class="math inline">\(\mu\)</span> such that <span class="math inline">\(\sigma(\rho) = \sigma(\varphi) = \sigma\)</span>. This translates into the assumption that the mechanism itself does not crowd out an agent’s intrinsic motivation.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
+<p>Our design does not allow us to test any of these assumptions which classifies them as <em>postulates</em>. While I already argued that neither learning nor fatigue should be a concern here, the latter assumption deserves attention given the literature on the crowding-out effect of intrinsic motivation due to monetary incentives (see <span class="citation">(Frey and Oberholzer-Gee <a href="#ref-FreyOberholzer">1997</a>)</span> for a general overview, <span class="citation">(Bénabou and Tirole <a href="#ref-Tirole2003">2003</a>)</span> for a theoretical discourse or <span class="citation">(Dickinson and Villeval <a href="#ref-Dickinson2008">2008</a>)</span> as well as <span class="citation">(Frey <a href="#ref-Frey1993">1993</a>)</span> for papers that are closely related to this thesis) since the monetary incentive scheme is the key difference between the two mechanisms <span class="math inline">\(\rho\)</span> and <span class="math inline">\(\varphi\)</span>.</p>
+<p>Explanations for the prevalence of a crowding-out effect due to monetary incentives require factors such as close relations between principals and agents, the prevalence of a less knowledgeable agent (compared to the principal) or agents who generate profit for the principals and have concerns about how the profit is distributed. None of these factors seem to confound the predictions in our setting as the relation between principals and agents is abstract and impersonal, as the agent has more and better information about herself as well as her performance in the two box-clicking tasks and because the distributional concerns (regarding the principal’s income) are driven by reciprocity, which is the very subject of the following subsection and this thesis in general.</p>
+</div>
+<div id="the-reciprocal-agents-expected-utility" class="section level2">
+<h2><span class="header-section-number">3.2</span> The Reciprocal Agent’s Expected Utility</h2>
+<p>The basic intuition of the notion of reciprocity that I apply in this paper is that people respond kindly (unkindly) if they perceive actions of others as kind (unkind). As before, I will focus on the agent in our setting and apply this notion of reciprocity formally. To be more precise, I will base my considerations on the model of <span class="citation">(Dufwenberg and Kirchsteiger <a href="#ref-Kirchsteiger2004">2004</a>)</span>. Even though there is an uninterested chance player incorporated in our design, I do not need to involve her in the analysis as Sebald’s <span class="citation">(Sebald <a href="#ref-Sebald2010">2010</a>)</span> model would allow me to do. I focus on the expected outcomes as illustrated in Figure XY and omit the chance player.</p>
+<p>Like <span class="citation">(Dufwenberg and Kirchsteiger <a href="#ref-Kirchsteiger2004">2004</a>)</span> as well as <span class="citation">(Sebald <a href="#ref-Sebald2010">2010</a>)</span>, I denote <span class="math inline">\(b_{ij}\)</span> as player <span class="math inline">\(i\)</span>’s belief about player <span class="math inline">\(j\)</span>’s strategy (first-order belief) and <span class="math inline">\(c_{iji}\)</span> as player <span class="math inline">\(i\)</span>’s belief about player <span class="math inline">\(j\)</span>’s belief about player <span class="math inline">\(i\)</span>’s strategy (second-order belief). Players update their first- and second-order beliefs and strategies as soon as they learn the other player’s actions which is why they depend on the history <span class="math inline">\(h\)</span>. <span class="math inline">\(a_i(h)\)</span> describes the (updated) behavioral strategy that prescribes the same choices as <span class="math inline">\(a_i\)</span> except for the choices player <span class="math inline">\(i\)</span> has already made at <span class="math inline">\(h\)</span> (since they are consequently made with probability 1).
+Incorporating the intrinsic motivation again, the agent’s utility function, is assumed to look as follows:</p>
+<p><span class="math display">\[
+    U_i(a_i(h), (b_{ij}(h))_{j \neq i}, (c_{iji}(h))_{j \neq i}) = \ \pi_i(a_i(h), (b_{ij}(h))_{j \neq i})\\
+    + Y_{ij} \cdot \kappa_{ij}(a_i(h), (b_{ij}(h))_{j \neq i}) \cdot \lambda_{iji}(b_{ij}(h), (c_{iji}(h))_{j \neq i})\\
+    - c_i(a_i(h))\\
+    + \sigma \cdot a_i(h)
+\]</span></p>
+<p>According to this function, the agent’s utility consists of four components: her expected material payoff, her psychological payoff, her costs of effort as well as her intrinsic motivation. The psychological payoff (the second term) includes a non-negative reciprocity parameter <span class="math inline">\(Y_{ij}\)</span> describing her sensitivity towards the matched principal’s (un)kindness, her (un)kindness towards the principal <span class="math inline">\(\kappa_{ij}\)</span> as well as her perceived (un)kindness of the principal towards her <span class="math inline">\(\lambda_{iji}\)</span>. Note that a reciprocity parameter of zero would describe a special case where an agent is not motivated by (intention-based) social preferences. In other words, a utility function with <span class="math inline">\(Y_{ij} = 0\)</span> would equal the purely self-interested case from above.</p>
+<p>Before I derive explicit predictions concerning the reciprocal agent’s behavior, I will focus on the elements that represent the psychological payoff. The original model’s kindness function <span class="math inline">\(\kappa_{ij}\)</span> implies that an agent evaluates her kindness towards the principal by comparing the payoff she grants the principal by her chosen action compared to what she could have given her – and she applies a similar mindset when evaluating the perceived kindness of the principal towards her (<span class="math inline">\(\lambda_{iji}\)</span>). Formally,</p>
+<p><span class="math display">\[
+    \kappa_{ij}(a_i(h), (b_{ij}(h))_{j \neq i}) = \pi_j(a_i(h), (b_{ij}(h))_{j \neq i}) - \pi_j^{e_i}((b_{ij}(h))_{j \neq i})
+\]</span></p>
+<p>where <span class="math inline">\(\pi_j^{e_i}( \cdot )\)</span> describes a <span class="math inline">\(j\)</span>’s equitable payoff that is affected by <span class="math inline">\(i\)</span>. In the original paper, it is defined as</p>
+<p><span class="math display">\[
+    \pi_j^{e_i}((b_{ij}(h))_{j \neq i}) = \frac{1}{2}  \Big[max\big\{\pi_j(a_i(h), (b_{ij}(h))_{j \neq i}) \  | \ a_i(h) \in (0, 1) \big\}\\
+     + min\big\{\pi_j(a_i(h), (b_{ij}(h))_{j \neq i}) \ | \ a_i(h) \in (0, 1) \big\} \Big]
+\]</span></p>
+<p>which basically means that the equitable payoff is a virtual average payoff that <span class="math inline">\(i\)</span> can grant <span class="math inline">\(j\)</span>.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> If the eventual payoff <span class="math inline">\(j\)</span> receives due to <span class="math inline">\(i\)</span>’s action is higher than this average, <span class="math inline">\(i\)</span> considers herself as kind towards <span class="math inline">\(j\)</span>.</p>
+<p>I generally agree with the concept of an equitable payoff as a reference point and apply it later to evaluate the agents’ <em>perceived</em> kindness. However, for the agent’s evaluation of her own kindness towards the principal, I deviate from Dufwenberg and Kirchsteiger’s <span class="citation">(Dufwenberg and Kirchsteiger <a href="#ref-Kirchsteiger2004">2004</a>)</span> approach to determine it in the following way, since I believe that the original model does not fit into our setting:</p>
+<p><span class="math display">\[
+    \pi_j^{e_i}((b_{ij}(h))_{j \neq i}) \equiv \pi_j(l^{1^{st}}_i, (b_{ij}(h))_{j \neq i}) 
+\]</span></p>
+<p>with <span class="math inline">\(l^{1^{st}}_i \in [0, 1]\)</span> as the agent’s productivity measured in the first stage. The rationale behind this is simple: I believe that agents are heterogeneous with respect to their productivity (their cost functions) and that an agent’s inherent productivity is the best predictor of how well a particular agent can perform in the future. In other words, I expect an agent to be able to more or less replicate the effort provision from the first stage if she faces an identical strategic environment. Most importantly, I assume that subjects hold the belief that they could replicate their own effort and that they hold the same beliefs about others (<span class="math inline">\(j\)</span> believes that <span class="math inline">\(i\)</span> can easily replicate <span class="math inline">\(i\)</span>’s productivity from Stage 2 in Stage 1). Given this, Dufwenberg and Kirchsteiger’s <span class="citation">(Dufwenberg and Kirchsteiger <a href="#ref-Kirchsteiger2004">2004</a>)</span> definition of an equitable payoff does not make much sense since it would translate into an equitable payoff resulting from a performance of <span class="math inline">\(\frac{1}{2} \cdot (0 + 1)\)</span> irrespective of the idea that an agent could not possibly bring forth a performance of 100% due to a low productivity. Because it does seem even less intuitive and somehow arbitrary that an agent considers a payoff resulting from a performance of half her productivity <span class="math inline">\(\frac{1}{2} \cdot (0 + l^{1^{st}}_i)\)</span> as equitable, I suspect <span class="math inline">\(\pi_j(l^{1^{st}}_i, (b_{ij}(h))_{j \neq i})\)</span> to be the best candidate for the fairness norm the equitable payoff was intended to represent.</p>
+<p>This assumption is quite important as it sets the course for our analysis of kind or unkind behavior: kindness (unkindness) is identified as an increased (decreased) effort provision between the productivity in the first stage, <span class="math inline">\(l^{1^{st}}_i\)</span>, and the performance in the second stage, <span class="math inline">\(l(h)\)</span>:</p>
+<p><span class="math display">\[
+    \kappa_{ij}(l(h), (b_{ij}(h))_{j \neq i})  = \pi_j(l(h), (b_{ij}(h))_{j \neq i}) - 
+    \pi_j(l^{1^{st}}_i, (b_{ij}(h))_{j \neq i})
+\]</span></p>
+<p>where I substituted $a_i(h) = l(h) $. This implies that an agent first chooses her effort at history <span class="math inline">\(h^1\)</span> or <span class="math inline">\(h^2\)</span> and then chooses her workload <span class="math inline">\(n\)</span> subject to her effort decision.</p>
+<p>Remember that the principal’s earnings consisted of several components. In particular, her material payoff was designed as follows: <span class="math inline">\(\pi_j \equiv \varepsilon + l - \pi_i(l,\mu) - c(\mu)\)</span> where <span class="math inline">\(\varepsilon\)</span> is a constant that is commonly known. Because the principal chooses <span class="math inline">\(\mu\)</span> before the agent makes her first move, the agent knows with certainty which mechanism was chosen by the principal when she evaluates her kindness at h<sup>1</sup> or h<sup>2</sup>. She thus knows the principal’s costs <span class="math inline">\(c(\mu)\)</span> and is able to infer the expected salary which she will receive from the principal (<span class="math inline">\(\pi_i(l,\mu)\)</span>). Consequently, she knows each of the components that constitute the principals earnings. It thus suffices to only consider the agent’s effort provision in either h<sup>1</sup> or h<sup>2</sup> to form <span class="math inline">\(\pi_j^{e_i}\)</span> and <span class="math inline">\(\kappa_{ij}\)</span> as everything else cancels out. This means that the agent’s effort provision is the only channel to exhibit kindness or unkindness. Given that the subgame of the second stage where the principal chooses the performance-based mechanism is very similar to the first stage, I understand an increased effort provision (<span class="math inline">\(l^*_\varphi - l^{1^{st}}_i &lt; 0\)</span>) as an expression of kindness and a decreased effort provision (<span class="math inline">\(l^*_\varphi - l^{1^{st}}_i &gt; 0\)</span>) as an expression of unkindness.</p>
+<p>Similarly to <span class="math inline">\(\kappa_{ij}(\cdot)\)</span> in the original paper, the <em>perceived</em> kindness <span class="math inline">\(\lambda_{iji}(\cdot)\)</span> is expressed difference between an equitable payoff and the actual payoff – the two functions are, <em>prima facie</em>, mathematically equivalent.</p>
+<p><span class="math display">\[
+    \lambda_{iji}(b_{ij}(h), (c_{iji}(h))_{j \neq i}) = \pi_i(b_{ij}(h), (c_{iji}(h))_{j\neq i}) - \pi_i^{e_j}((c_{iji}(h))_{j\neq i})
+\]</span></p>
+<p>In contrast to <span class="math inline">\(\pi_j^{e_i}\)</span>, I find it practical to form the equitable payoff the agent can receive from the principal (<span class="math inline">\(\pi_i^{e_j}\)</span>) as in the original paper because the principal has a binary set of actions <span class="math inline">\(\mathcal{A}_j = \{\rho,\varphi\}\)</span>.</p>
+<p><span class="math display">\[
+    \pi_i^{e_j}((c_{iji}(h))_{j \neq i}) = \frac{1}{2}  \Big[\big\{\pi_i(\rho, (c_{iji}(h))_{j \neq i}) \  | \ c_{iji}(h)_{j \neq i} \in (0, 1) \big\}\\
+ +\big\{\pi_i(\varphi, (c_{iji}(h))_{j \neq i}) \  | \ c_{iji}(h)_{j \neq i} \in (0, 1) \big\} \Big]
+\]</span></p>
+<p>Assuming an agent’s performance not to equal one half, the two choices yield two different expected payoffs for the agent. Because the equitable payoff is the average of both of them, there will always be one action that leads to a payoff that is higher than the equitable payoff while the opposite choice will lead to a payoff that is lower. As a consequence, the agent will eventually perceive one action as kind while she will perceive the other one as unkind. Formally:</p>
+<p><span class="math display">\[
+    \pi_i^{e_j}((c_{iji}(h))_{j \neq i}) 
+    =  \ w + \frac{1}{2} \cdot b \cdot (c_{iji}(h)_{j\neq i} + q)\\
+     \\
+    \Rightarrow \lambda_{iji}(\rho(h^1), (c_{iji}(h^1))_{j \neq i}) =  \ w + q \cdot b - w - 
+    \frac{1}{2} \cdot b \cdot(c_{iji}(h^1)_{j\neq i} + q)\\
+    =  \ \frac{1}{2} \cdot b \cdot (q - c_{iji}(h^1)_{j\neq i})\\
+     \\
+    \Rightarrow \lambda_{iji}(\varphi(h^2), (c_{iji}(h^2))_{j \neq i}) =  \ w + c_{iji}
+    (h^2)_{j\neq i} \cdot 
+    b - w - \frac{1}{2} \cdot b \cdot(c_{iji}(h^2)_{j\neq i} + q)\\
+    =  \ \frac{1}{2} \cdot b \cdot (c_{iji}(h^2)_{j\neq i} - q)\\ 
+\]</span></p>
+<p>Which action an agent perceives as kind (unkind) therefore depends on the agent’s second-order belief, <span class="math inline">\(c_{iji}(h)\)</span> – what the agent believes the principal to believe about the agent’s performance in the second stage.</p>
+<p>The divisive question now is, how this second-order belief is formed. Given that the agent knows that the principal learned her productivity in the first stage, I find it most intuitive to set <span class="math inline">\(c_{iji}(h) \equiv l^{1^{st}}_i\)</span>. This implies that the agent believes that the principal makes her decision expecting the agent to replicate her effort provision from the first stage. At this point, it is important to note that this belief is only reasonable for the performance-based mechanism (<span class="math inline">\(\varphi\)</span>) as the choice of <span class="math inline">\(\varphi\)</span> puts the agent into a similar strategic environment with identical material incentives as in the first stage. The important difference is that the principal is responsible for the subgame the agent finds herself in – but note that I assume the second-order beliefs to neglect this difference: by setting <span class="math inline">\(c_{iji}(h) \equiv l^{1^{st}}_i\)</span>, I implicitly assume that the agent does not expect the principal to consider the impact of her decision on the agent’s psychological payoff. (Incorporating reciprocity considerations into the second-order beliefs would, however, not affect the predictions much as I will show below.)</p>
+<p>Alternatively, the material incentives between the first and the second stage differ starkly if the principal chooses <span class="math inline">\(\rho\)</span>. It is therefore hard to make inferences about <span class="math inline">\(c_{iji}(h^1)\)</span>. Sure, a smart principal would anticipate that the agent has no material incentive to exert effort, and assume that she exerts effort up to the point where the absolute value of her costs of effort equal her intrinsic motivation and, perhaps, she would even take her psychological payoff into account. But would the agent believe the principal to have such elaborated beliefs about the agent’s effort provision? After all, the agent knows that the principal neither has isolated information about her intrinsic motivation nor about her reciprocity parameter <span class="math inline">\(Y_{ij}\)</span>. Due to the lack of information, I neglect the agents who are facing the random mechanism and concentrate on those who exert effort under the performance-based mechanism. Doing so, I consider <span class="math inline">\(\rho\)</span> only as an alternative to <span class="math inline">\(\varphi\)</span> which allows us to trigger emotions of kindness or unkindness because the principal’s choice of <span class="math inline">\(\varphi\)</span> could have been better (or worse) for an agent with a particular productivity.</p>
+<p>Consider <span class="math inline">\(\lambda_{iji}\)</span> in the branches that follow history <span class="math inline">\(h^2\)</span> for two agents with different productivities, <span class="math inline">\(\underline{l}^{1^{st}}_n &lt; q &lt; \overline{l}^{1^{st}}_m\)</span>. The less productive agent <span class="math inline">\(n\)</span> will perceive the choice of the performance-based mechanism as unkind while <span class="math inline">\(m\)</span> will perceive it as kind because</p>
+<p><span class="math display">\[
+    \lambda_{njn}(\varphi(h^2), \underline{l}^{1^{st}}_n(h^2)) =  \
+        \frac{1}{2} \cdot b \cdot (\underline{l}^{1^{st}}_n - q) &lt; 0 \\
+    \text{and}\\
+    \lambda_{mjm}(\varphi(h^2), \overline{l}^{1^{st}}_m(h^2)) =  \ 
+        \frac{1}{2} \cdot b \cdot (\overline{l}^{1^{st}}_m - q) &gt; 0 .
+\]</span>
+Conversely, they will perceive the choice of the random mechanism as kind and unkind, respectively. Importantly, one and the same mechanism can therefore be perceived as kind or unkind. This is the main feature of our design which we want to exploit to investigate hidden costs <em>and</em> benefits of monitoring.</p>
+<p>As the psychological payoff is the product of <span class="math inline">\(Y_{ij}\)</span>, <span class="math inline">\(\kappa_{ij}(\cdot)\)</span> and <span class="math inline">\(\lambda_{iji}(\cdot)\)</span>, it is easy to see that a negative <span class="math inline">\(\lambda_{iji}(\cdot)\)</span> must be met by a negative <span class="math inline">\(\kappa_{ij}(\cdot)\)</span> to maximize this product if <span class="math inline">\(Y_{ij}&gt;0\)</span>. Likewise, a positive <span class="math inline">\(\lambda_{iji}(\cdot)\)</span> must be met by a positive <span class="math inline">\(\kappa_{ij}(\cdot)\)</span>. These two insights mirror the basic notion of reciprocity – tit for tat.</p>
+<p>Putting all these pieces together, the utility function of agents who faced the performance-based mechanism looks as follows</p>
+<p><span class="math display">\[
+    U_i(l_i | \varphi) = \ w+ b \cdot l_i\\
+                 + Y_{ij} \cdot [l_i - l_i^{1^{st}}]  \cdot [\frac{1}{2} \cdot b \cdot 
+                    (l_i^{1^{st}} - q)] \\
+                 - c(l_i)\\
+                 + \sigma \cdot l_i
+\]</span></p>
+<p>and is solved by <span class="math inline">\(l^*_i = c_l^{-1}(b + \sigma + Y_{ij} \cdot [\frac{1}{2} \cdot b \cdot (l_i^{1^{st}} - q)])\)</span>. Note that the equilibrium effort provision under the performance-based mechanism in the second stage looks similar to the first stage’s equilibrium effort provision (<span class="math inline">\(l_i^{1^{st}} = c_l^{-1}(b +\sigma)\)</span>). The only difference is that the perceived kindness now is a part of the first-order condition. Remember that <span class="math inline">\(c_l^{-1}(\cdot)\)</span> is assumed to be an increasing function (due to the convex cost function) such that <span class="math inline">\(l^*_i &gt; l_i^{1^{st}}\)</span> if <span class="math inline">\(l_i^{1^{st}} &gt; q\)</span> and if <span class="math inline">\(Y_{ij}&gt;0\)</span>. Similarly, <span class="math inline">\(l^*_i &lt; l_i^{1^{st}}\)</span> if <span class="math inline">\(l_i^{1^{st}} &lt; q\)</span> and if <span class="math inline">\(Y_{ij}&gt;0\)</span>. To put it more verbally, I predict that:</p>
+<blockquote>
+<p>Reciprocal agents with a productivity lower than <span class="math inline">\(q = \frac{1}{2}\)</span> perform worse in the second stage than they did before if their matched principal chooses the performance-based mechanism. That is, the principal suffers hidden costs of monitoring.</p>
+</blockquote>
+<blockquote>
+<p>Reciprocal agents with a productivity higher than <span class="math inline">\(q\)</span> perform better in the secondstage than they did before, if their matched principal chooses the performance-based mechanism (such that the principal gains hidden benefits of monitoring).</p>
+</blockquote>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/00_Social_Prediction.pdf&quot;</span>)</code></pre>
+<p>Assuming <span class="math inline">\(c_l^{-1}(\cdot)\)</span> to be a linear increasing function, these predictions are outlined in Figure XY which is based on Figure XY. The graph contains dashed and solid lines. The colored dashed lines mirror the predictions of the previous subsection which concern purely self-interested agents. The solid red line illustrates the predicted behavior of reciprocal agents who face the performance-based mechanism. Comparing the different predictions (that is, the solid and the dashed red lines) one recognizes the hidden costs to the left as well as the hidden benefits of monitoring on the right of <span class="math inline">\(q =\frac{1}{2}\)</span> (the vertical dashed line) as the solid line appears to be rotated counter-clockwise.</p>
+<p>Consider now the case where the agent has more sophisticated second-order beliefs where she assumes the principal to be mindful of her psychological payoff and denote this second-order belief as <span class="math inline">\(\tilde{l}_i\)</span>. We already know that an agent with <span class="math inline">\(\underline{l}^{1^{st}}_i &lt; q\)</span> perceives the choice of <span class="math inline">\(\varphi\)</span> as unkind and thus decreases her effort provision (because <span class="math inline">\(l_i^*\)</span> is increasing in <span class="math inline">\(\lambda_{iji}(\cdot)\)</span>). An agent who believes that the principal anticipates this behavior would then perceive the principal’s choice of <span class="math inline">\(\varphi\)</span> as even less kind (or ``more unkind’’) because she would believe that the principal believes that she would exert an effort of <span class="math inline">\(\tilde{l}_i &lt; \underline{l}^{1^{st}}_i &lt; q\)</span>. In the end, low performances worsen the chance to receive the bonus payment (especially compared to the chances the same agent would have under the choice of <span class="math inline">\(\rho\)</span>). This would, however, not make much sense as the agent knows that it would also be against the interest of the principal to decrease the agent’s effort provision. In contrast, an agent with <span class="math inline">\(\overline{l}^{1^{st}}_i &gt; q\)</span> considers the choice of <span class="math inline">\(\varphi\)</span> as kind because it improves her chance to receive the bonus payment in the case where the psychological payoff was incorporated. If the agent believes the principal to believe that the agent would exert <span class="math inline">\(q &lt; \overline{l}^{1^{st}}_i &lt; \tilde{l}_i\)</span>, it would result that <span class="math inline">\(\lambda_{iji}(\varphi(h^2), \overline{l}^{1^{st}}_i(h^2)) &lt; \lambda_{iji}(\varphi(h^2), \tilde{l}_i(h^2))\)</span>. Because the equilibrium effort provision increases in <span class="math inline">\(\lambda(\cdot)\)</span> a high <span class="math inline">\(\tilde{l}_i\)</span> goes hand in hand with a high <span class="math inline">\(l_i^*\)</span>. Incorporating the psychological payoff into the second-order beliefs would therefore result either in an unreasonable belief (which might very well be replaced by <span class="math inline">\(c_{iji}(h) = l^{1^{st}}_i\)</span>) or in a belief which reinforces itself.</p>
+<p>Importantly, the original model does not incorporate the intrinsic motivation <span class="math inline">\(i\)</span> draws from her work on the effort task. Instead, it only considers a material and a psychological payoff. The latter only depends on the material payoffs and a set of first- and second-order beliefs. Even if the intrinsic motivation is stable and not affected by the principal’s (<span class="math inline">\(j\)</span>’s) choice <span class="math inline">\(\mu\)</span>, it would be difficult to incorporate <span class="math inline">\(\sigma\)</span> into the fairness considerations of the psychological payoff. The problem is that the model would require the agent to form second-order beliefs about her intrinsic motivation and her equilibrium effort provision under different mechanisms to come up with <span class="math inline">\(\pi_i^{e_j}\)</span>. This aggravation alone would blow up the model such that its predictive power would be reduced. Since we, as the researchers, as well as the participants do not have any isolated information about an agent’s intrinsic motivation, I keep the model simple and retrain from considering the intrinsic motivation within the psychological payoff.</p>
+<p>The most important caveat of this chapter is not that it is so rich in assumptions but, if anything, that it lacks assumptions one would need to make quantitative predictions. In particular, I made rather vague yet reasonable and therefore popular assumptions concerning the agents’ costs of effort by stating that they are convex, bijective, increasing and equal to zero if the level of effort provided is zero as well. This allows me to analyze the inverse of the marginal cost function: As <span class="math inline">\(c(\cdot)\)</span> is convex and increasing, its derivative <span class="math inline">\(c_l(\cdot)\)</span> is non-negative and increasing. As a consequence, <span class="math inline">\(c_l^{-1}(\cdot)\)</span> is increasing and non-negative as well. However, I do not know (or do not assume to know) whether <span class="math inline">\(c_l^{-1}(\cdot)\)</span> is convex, linear or concave.</p>
+<p>To understand the implication the curvature has on my predictions, imagine a concave inverse of the marginal cost function as illustrated in Figure XY.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/09_Prediction_Problem.pdf&quot;</span>)</code></pre>
+<p>Note that it illustrates an agent who finds herself in three different scenarios on the horizontal axis: a situation in which the agent feels treated unkindly, a situation in which she is purely self-interested (or neither treated kindly nor unkindly) as well as a situation in which she feels treated kindly (from left to right). You find the corresponding equilibrium levels of effort provision on the vertical axis where <span class="math inline">\(a\)</span> corresponds to the unkind scenario, <span class="math inline">\(b\)</span> to the neutral one and <span class="math inline">\(c\)</span> to the one in which she feels treated kindly. It is easy to see that the increase of effort provision is smaller than the absolute value of the decrease, <span class="math inline">\(c-b &lt; |b-a|\)</span>, despite the fact that the perceived unkindness (<span class="math inline">\(-\lambda \cdot Y_{ij}\)</span>) is exactly as strong as the perceived kindness (<span class="math inline">\(\lambda \cdot Y_{ij}\)</span>).<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> The implication of this observation is that two opposing fairness perceptions of one and the same strength (<span class="math inline">\(\pm \lambda \cdot Y_{ij}\)</span>) might result in two different effects that vary in their magnitude – or to put it more graphically: the red line in Figure XY could very well be concave (steeper to the left and flatter to the right) such that it looks as if it was harder to reciprocate kindness than unkindness (as I sketch it in Figure XY below).</p>
+</div>
+<div id="interim-conclusion" class="section level2">
+<h2><span class="header-section-number">3.3</span> Interim Conclusion</h2>
+<p>The two previous sections have illustrated how different assumptions (pure self-interest versus reciprocity) lead to different predictions. In very broad terms, one could summarize the difference as follows: Agents who are purely self interested only care about their material payoffs while reciprocal agents, in contrast, also focus on the intentions of principals. As a consequence, self-interested agents exert the exact same effort in Stage 2 (given the performance-based mechanism) as in Stage 1 while reciprocal agents deviate.</p>
+<p>Imagine a treatment in which an agent is matched with an artificial principal who makes random decisions. According to the model in the previous chapter, such a treatment would not allow for a non-zero psychological payoff because the agent would know that the principal would not have any intentions such that the perceived kindness would be zero. Alternatively one could argue that the agent would have a reciprocity parameter (towards the principal) of <span class="math inline">\(Y_{ij}=0\)</span>. In both cases, I would predict that the agent behaves the same way as a purely self-interested agent.</p>
+<p>In conclusion, the actual and the hypothetical treatment are distinguished by the fact that reciprocity could potentially exist in the former treatment. To put it differently, subjects in the actual treatment are potentially <em>exposed</em> to reciprocity. Sketching a similar picture as before, Figure XY illustrates the effect of this exposure as a red-shaded area.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/10_Treatment_Effect_Prediction.pdf&quot;</span>)</code></pre>
+<p>If one uses the thought experiment and relies on my predictions, one would call this red area the treatment effect or the causal effect of reciprocity on performance. It seems, however, impossible to <em>observe</em> this difference, since our experimental design does not contain a treatment like the one I just described. It is the aim of the next chapter to describe how one can nevertheless <em>estimate</em> the causal effect of reciprocity to ultimately test, whether my predictions of chapter XY bear empiricism.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-MathDestruction">
+<p>O’Neil, Cathy. 2017. <em>Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy</em>. Broadway Books.</p>
+</div>
+<div id="ref-FreyOberholzer">
+<p>Frey, Bruno S., and Felix Oberholzer-Gee. 1997. “The Cost of Price Incentives: An Empirical Analysis of Motivation Crowding- Out.” <em>The American Economic Review</em> 87 (4). American Economic Association: 746–55.</p>
+</div>
+<div id="ref-Tirole2003">
+<p>Bénabou, Roland, and Jean Tirole. 2003. “Intrinsic and Extrinsic Motivation.” <em>The Review of Economic Studies</em> 70 (3): 489–520. <a href="https://doi.org/10.1111/1467-937X.00253">https://doi.org/10.1111/1467-937X.00253</a>.</p>
+</div>
+<div id="ref-Dickinson2008">
+<p>Dickinson, David, and Marie-Claire Villeval. 2008. “Does Monitoring Decrease Work Effort?: The Complementarity Between Agency and Crowding-Out Theories.” <em>Games and Economic Behavior</em> 63 (1). Elsevier: 56–76.</p>
+</div>
+<div id="ref-Frey1993">
+<p>Frey, Bruno S. 1993. “Does Monitoring Increase Work Effort? The Rivalry with Trust and Loyalty.” <em>Economic Inquiry</em> 31 (4). Wiley Online Library: 663–70.</p>
+</div>
+<div id="ref-Kirchsteiger2004">
+<p>Dufwenberg, Martin, and Georg Kirchsteiger. 2004. “A Theory of Sequential Reciprocity.” <em>Games and Economic Behavior</em> 47 (2). Elsevier: 268–98.</p>
+</div>
+<div id="ref-Sebald2010">
+<p>Sebald, Alexander. 2010. “Attribution and Reciprocity.” <em>Games and Economic Behavior</em> 68 (1). Elsevier: 339–52.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="12">
+<li id="fn12"><p>If you focus on the principal’s (Person A’s) earnings, you will see that the principal’s earnings were strictly increasing in the agent’s performance so that she had a monetary incentive to induce effort.<a href="Predictions.html#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>Note that her effort provision will, in the case of a random mechanism, only equal zero if her intrinsic motivation she derives from clicking boxes is zero as well.<a href="Predictions.html#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn14"><p>The subsequent section will show how <em>the choice of</em> the mechanism can crowd out intrinsic motivation.<a href="Predictions.html#fnref14" class="footnote-back">↩</a></p></li>
+<li id="fn15"><p>In fact, the original equitable payoff is slightly different since it conditions the strategies to be part of a efficient space. There are, however, no inefficient strategies in our setting which is why I changed the corresponding formula slightly.<a href="Predictions.html#fnref15" class="footnote-back">↩</a></p></li>
+<li id="fn16"><p>It is straightforward to imagine the cases where the inverse is linear or convex. I therefore skip further examples.<a href="Predictions.html#fnref16" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Strategy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-Predictions.Rmd",
+"text": "Edit"
+},
+"download": ["gitBook.pdf", "gitBook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Master Thesis: The (hidden) Benefits of Monitoring</title>
+  <meta name="description" content="Master Thesis: The (hidden) Benefits of Monitoring">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  
+  
+  
+
+<meta name="author" content="Hauke C. Roggenkamp">
+
+
+<meta name="date" content="2018-11-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="Predictions.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="" target="blank"> The (hidden) Benefits of Monitoring</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="Design.html"><a href="Design.html"><i class="fa fa-check"></i><b>2</b> Design</a><ul>
+<li class="chapter" data-level="2.1" data-path="Design.html"><a href="Design.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="Design.html"><a href="Design.html#the-real-effort-task"><i class="fa fa-check"></i><b>2.2</b> The Real-Effort Task</a></li>
+<li class="chapter" data-level="2.3" data-path="Design.html"><a href="Design.html#implications"><i class="fa fa-check"></i><b>2.3</b> Implications</a></li>
+<li class="chapter" data-level="2.4" data-path="Design.html"><a href="Design.html#procedural-details"><i class="fa fa-check"></i><b>2.4</b> Procedural Details</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Predictions.html"><a href="Predictions.html"><i class="fa fa-check"></i><b>3</b> Behvioral Predictions</a><ul>
+<li class="chapter" data-level="3.1" data-path="Predictions.html"><a href="Predictions.html#the-self-interested-agents-expected-utility"><i class="fa fa-check"></i><b>3.1</b> The self-interested Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.2" data-path="Predictions.html"><a href="Predictions.html#the-reciprocal-agents-expected-utility"><i class="fa fa-check"></i><b>3.2</b> The Reciprocal Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.3" data-path="Predictions.html"><a href="Predictions.html#interim-conclusion"><i class="fa fa-check"></i><b>3.3</b> Interim Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Strategy.html"><a href="Strategy.html"><i class="fa fa-check"></i><b>4</b> Empirical Strategy</a></li>
+<li class="chapter" data-level="5" data-path="Analysis.html"><a href="Analysis.html"><i class="fa fa-check"></i><b>5</b> Analysis</a></li>
+<li class="chapter" data-level="6" data-path="Conclusion.html"><a href="Conclusion.html"><i class="fa fa-check"></i><b>6</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.econ.ku.dk/cee/" target="blank">Centre for Experimental Economics</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Master Thesis: The (hidden) Benefits of Monitoring</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Design" class="section level1">
+<h1><span class="header-section-number">Section 2</span> Design</h1>
+<p>Our experiment consisted of two stages and a questionnaire which you can find in Appendix . The idea was to create an environment in which both the principal’s decision to monitor and her omission of monitoring can be perceived as kind or unkind by the agent subject to her productivity.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> We therefore implemented a real-effort task to measure an agent’s productivity, disclosed this information to the agent as well as to a matched principal, let the principal choose between two options and observed the agent’s reaction to the principal’s choice. The principal’s choice and the agent’s reaction were interdependent, that is, their actions affected not only their own, but also the other player’s earnings. Importantly, agent’s who I’ll later classify as unproductive preferred the principal’s option which I interpret as the omission of monitoring, while the productive agents preferred the alternative option, which I interpret as monitoring. As this section explains, we made it easy for the agent’s to form beliefs about the intentions of the principal in a, for us, comprehensible manner. Our design therefore allows me to identify who should feel treated kindly or unkindly to observe whether the perceived (un-)kindness is reciprocated.</p>
+<div id="overview" class="section level2">
+<h2><span class="header-section-number">2.1</span> Overview</h2>
+<p>The experiment consisted of two stages. One independent (or “individual”) stage was played one-shot and followed by an interdepend stage in which we implemented an one-shot principal-agent setting.</p>
+<p>The design of the first stage is illustrated in Figure XY, where <span class="math inline">\(i\)</span> denotes any participant and <span class="math inline">\(l\)</span> her effort provision (or “labor supply”). The player <span class="math inline">\(0\)</span> is an artificial and thus uninterested<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> player to whom one can also refer as <em>chance</em>} as she only conducts an explicit randomization subject to <span class="math inline">\(i\)</span>’s effort provision.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/20171127_GameTree&quot;</span>)</code></pre>
+<p>A participant’s effort provision in this task affected her, and only her, earnings in a simple way: The higher her effort provision, the higher her chances to earn a bonus payment of <span class="math inline">\(b=75\)</span> Danish kroner (DKK) in addition to a flat wage of <span class="math inline">\(w=150\)</span> DKK. The possible effort provision ranged between 0 and 100 percent. With each additional percentage point of provided effort, the participant’s chances to earn the bonus payment increased by one percentage point as well. I’ll refer to this mechanism as <em>“performance-based”</em> in what follows. As the effort a participant provided in this stage did not involve any strategic considerations, I’ll refer to it as <em>“productivity”</em> and use it as a proxy to measure a participant’s initial ability (which, in turn, can be described by an individual costs of effort function).</p>
+<p>This stage served two purposes: First, participants familiarized themselves with a performance-based payment mechanism which is an important element of the second stage as well. Second, they got a good understanding of the difficulty of the task as well as an objective assessment of their own productivity since we informed each participant about her effort provision in that stage.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> This is important as the first stage’s performance is, as we believe, likely to be used to evaluate another player’s actions in the subsequent stage.</p>
+<p>At the beginning of each session, participants were randomly assigned to be either a principal or an agent. In Stage 2, the agents had to work on the same real-effort task as before and faced similar incentives to supply effort. While their work environment was similar, it differed substantially from the first stage because the agents’ decision to supply labor became strategically. The game that was played in the second stage is depicted in Figure XY and is described as follows:</p>
+<p>Firstly, participants found themselves to be either in the role of a principal or an agent who I henceforth denote as <span class="math inline">\(j\)</span> and <span class="math inline">\(i\)</span> respectively. Each agent was matched with one principal. Only the agents were engaging in the real-effort task in this stage. To distinguish the effort provision in the first stage from the effort provision that followed in the second stage, I’ll henceforth refer to the latter one as <em>“performance”</em>. The agents’ performance affected both their own and the matched principal’s payment function. Hence, instead of only playing a two-player game with the uninterested chance player, the real-effort task was now embedded into a three-player game (principal, agent and chance).</p>
+<p>This game included, secondly, more actions than just the performance in the task. To begin with, the principal, who was not exerting any effort in this stage, had to choose the mechanism that determined the agent’s earnings. More precisely, the principal was prompted to choose whether the agent’s earnings are determined by a performance-based mechanism (<span class="math inline">\(\varphi\)</span>) such as in the first stage or by a “<em>random</em>” mechanism(<span class="math inline">\(\rho\)</span>). The performance-based mechanism can be found on the right branches (following history <span class="math inline">\(h^2\)</span>) in Figure XY. As before, the agent’s performance determined the probability with which the chance player <span class="math inline">\(0\)</span> draws the bonus payment. The random mechanism on the left (following history <span class="math inline">\(h^1\)</span>) looks similar and differs in only one important aspect: the probability <span class="math inline">\(q \equiv 0.5\)</span> with which an agent received the bonus payment was independent of her performance in Stage 2.</p>
+<p>Before the principal chose the mechanism, she learned the matched agent’s productivity. Without any ambiguity or uncertainty, both participants therefore knew how much effort the agent was willing to supply under the first stage’s incentives. Importantly, the agent knew that the principal received this information.</p>
+<p>After the principal made her decision, the agent was asked to choose her workload <span class="math inline">\(n\)</span> in histories h<sup>1</sup> and h<sup>2</sup>. In particular, she was asked to indicate on how many screens, that is, on how many repetitions, she intended to work in this stage’s real-effort task. All participants knew that choosing, say, 80% of the screens would have spoiled their chance of achieving a performance of 100%; the best performance they could accomplish when choosing to only work on 80% of the screens was 80%. Subsequently, the agent exerted effort in the real-effort task subject to the workload she chose.
+Finally, chance executed its explicit randomizations – subject to the agent’s performance <span class="math inline">\(l\)</span> or by tossing a fair coin, (<span class="math inline">\(q=\frac{1}{2}\)</span>).</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/20171127_GameTree&quot;</span>)</code></pre>
+<p>Lastly, the second stage’s game was different with respect to its payments, simply because the game evolved to a three-player game with two interested players. The artificial player chance was still uninterested. Furthermore, the agent was facing the same set of possible payments as in the first stage. The principal’s payment function is designed such that she accounted for the agent’s salary. In return, the principal earned one DKK for each percentage point of the agent’s performance (if the agent’s performance was, say, <span class="math inline">\(0.65=65\%\)</span>, the principal earned 65 DKK) in addition to a flat wage of <span class="math inline">\(\varepsilon \equiv 340\)</span> DKK. Also the principal’s choice was costly to her since the random and the performance-based mechanism came at the expense of <span class="math inline">\(c_\rho \equiv 20\)</span> or <span class="math inline">\(c_\varphi \equiv 25\)</span> DKK respectively. Given this parameterization, the principal’s material payoff was increasing in the agent’s effort provision for any of the two mechanisms. (This is not as obvious as it sounds since the principal had to pay the agent’s expected bonus payment, which also increased in her performance in Stage 2.) Consequently, it was in the principal’s best (material) interest to induce a positive level of effort provision.</p>
+<p>To sum up, the second stage can be described as follows: Two participants were assigned to be either an agent, <span class="math inline">\(i\)</span>, or a principal, <span class="math inline">\(j\)</span>. Both faced an artificial, uninterested chance player denoted as <span class="math inline">\(0\)</span>. The agent’s productivity was public knowledge to both human players. The principal’s only action was to choose a payment mechanism that determined the agent’s earnings in this stage. Since the principal accounts for the agent’s earnings, this decision also affected her own earnings. The agent was informed about the principal’s choice and chose a workload before she exerted effort. Finally, chance determined the earnings of the agent (and thus of the principal) in Stage 2. See Figure XY for (another) visual representation of the the second stage’s timeline.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/20180103_Timeline&quot;</span>)</code></pre>
+</div>
+<div id="the-real-effort-task" class="section level2">
+<h2><span class="header-section-number">2.2</span> The Real-Effort Task</h2>
+<p>Participants worked on a tedious box-clicking task in which they faced a number of screens displaying dozens of randomly ordered black boxes. The participants indirectly earned money by clicking on these boxes, which caused the boxes to vanish. There was a timer running down from, say, eleven seconds. Each time the timer counted zero, the screen with all the black boxes that were left vanished and a new screen with a new set of randomly ordered boxes appeared. This usually happened before all boxes of the current screen were “clicked away”. The participants’ performance was then measured by the total number of boxes they clicked on, divided by the number of boxes they could have clicked away.</p>
+<p>To ensure that we eventually observe a heterogenous group of agents who differ in their productivity, we manipulated the difficulty of the box-clicking task exogenously. More specifically, the time each screen with boxes was displayed differed between sessions but not between stages or within sessions. We implemented two different difficulties with either seven<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> or twelve seconds on average per screen. The idea was that less time per screen made it more difficult to click away a certain percentage of boxes. The maximum number of screens as well as the number of boxes per screen remained unchanged between sessions. In conclusion, one could expect (1) the average effort provision to be higher in the eleven-seconds sessions and (2) the eleven-seconds sessions to take a little longer.</p>
+<p>We are confident that the task induced a positive cost of effort for participants since it was exhausting and boring. In addition, the task itself was pointless, such that we can also be confident that participants had no motive to spend any additional effort as a gesture of kindness towards the experimenters (for instance, to reciprocate the payments they offered).</p>
+<p>Even though we implemented one and the same task twice (for the agents) we expect that neither fatigue nor learning and thus, a nonseparability of effort costs (or ability) across time confounded the design. First, because the task itself did not require any specific knowledge or skills that can be trained during the session. Even if there was a learning effect, it might be negligible because each subject participated in a trial round. In these rounds, the subject could have gained all the knowledge and skills that were to be learned. Second, participants read instructions and answered control questions in between the two box-clicking periods such that there was an extensive break to recover.</p>
+</div>
+<div id="implications" class="section level2">
+<h2><span class="header-section-number">2.3</span> Implications</h2>
+<p>The design of both the first and the second stage was intended to be interpreted as a principal-agent setting in which the principal decides whether she wants to monitor the agent: By choosing the performance-based mechanism, the principal can either get a positive or a negative impression of the agent’s work. The better the agent’s performance, the higher the likelihood that the principal’s impression of the agent’s work is a positive one. To prevent truth telling problems the agent is paid according to the impression the principal has – a positive impression <em>automatically</em> leads to a bonus payment.
+The random mechanism resembles the omission of any monitoring such that the principal is forced to toss a virtual coin to make her bonus decision.</p>
+<p>Given any level of performance except for <span class="math inline">\(l=0.5\)</span>, agents materially preferred one of the two options the principal could choose: Agents with a performance lower than <span class="math inline">\(0.5\)</span> (to whom I’ll refer as <em>“unproductive”</em>) were best off under the random mechanism while agents with a performance of 0.5 were indifferent and agents with a performance higher than <span class="math inline">\(0.5\)</span> (the <em>“productive”</em> ones) materially preferred the performance-based mechanism as <span class="math inline">\(l\)</span> was higher than <span class="math inline">\(q\)</span> such that the expected earnings under the performance-based mechanism were higher as well. Hence, which choice of the principal would make the agent materially best off depended on the agents performance in Stage 2. This was known to the participants, as we asked several control questions that addressed these scenarios.</p>
+<p>As explained above, the principals made their monitoring decisions before the agent exerted effort. As such, neither the principal nor the agent knew the agent’s performance in the second stage when the principal chose to either monitor or disregard the agent. However, both knew that the real-effort task will be the same as in Stage 1 and as difficult as in Stage 1. Furthermore, both were informed about the agent’s productivity in Stage 1. Assuming that the agent believes the principal to believe that the agent can replicate her effort provision from the first stage in the second stage, the presented design allows us to identify agents who should feel treated kindly or unkindly (this is a core-assumption I will elaborate in the following chapter).
+Having identified those who should feel treated kindly or unkindly, we can observe their performance in the second stage to investigate reciprocity: Those who faced the performance-based mechanism found themselves in the exact same real-effort task as before, except that their effort also generated profit for a second participant. If, say, the agent felt treated unkindly, she was given the opportunity to pass back the unkindness by reducing her performance relative to her productivity. This would generate a profit for the principal lower than what the agent could have given her and come at the cost that the agent’s expected earnings would be lower as well. Likewise she could have passed back kindness with an increased effort provision.</p>
+</div>
+<div id="procedural-details" class="section level2">
+<h2><span class="header-section-number">2.4</span> Procedural Details</h2>
+<p>Each game was played one-shot and the whole experiment was framed in a neutral manner<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. The experiment was computerized using a software developed by <em>Andreas Gotfredsen</em> and modified by me. Participants were randomly allocated a role upon arrival at the laboratory.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> We made sure that no principal was seated next to her matched agent such that it was not possible to identify the person a participant was matched with by her clicking behavior. All sessions where conducted by at least one of two lab-assistants and supervised by me to ensure that there were no differences between sessions (session effects). Each participant read instructions and answered control questions before entering a stage. At several occasions during the whole experiment, a participant had to wait for the other participant to whom she was matched until she finished a certain part of the stage (such as the control questions). As a consequence, the experiment included extensive waiting periods in some cases.</p>
+<p>The 186<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> subjects who participated in the experiment were students from Copenhagen based Universities studying various majors.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> Using ORSEE <span class="citation">(Greiner <a href="#ref-ORSEE">2015</a>)</span>, we recruited students with little experience, that is, who had participated in no or few experiments before. As a result, the median experience in economic<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> experiments was two sessions. Between 16 and 28 subjects participated in each of the 8 sessions, resulting in 96 and 90 participants in the fast and slow treatment respectively. Including the time needed to read instructions, to answer the control questions and to pay the participants eventually, the experiment took about 80 minutes on average. Since the payments were designed such that no participant would earn less than 90 DKK (which, at that time, corresponded to 13.5 USD), we did not pay any fixed show-up fee.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> While payments ranged from 100 to 240 DKK (15 to 36 USD), participants earned 181 DKK (27 USD) on average for their participation in the experiment.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-ORSEE">
+<p>Greiner, Ben. 2015. “Subject Pool Recruitment Procedures: Organizing Experiments with Orsee.” <em>Journal of the Economic Science Association</em> 1 (1). Springer: 114–25.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>There is one special case in which agents are neither classified as productive nor as unproductive. These agents are indifferent between the two options and thus perceive the principal’s choice as neutral. All the other agents, however, prefer one of the two options such that they can feel treated kindly or unkindly.<a href="Design.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>The player did not receive any payments and acted randomly.<a href="Design.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Prior to running the incentivized box-clicking task, each participant engaged in a short unincentivized trial round. As a consequence, participants knew how the task looks like. However, they did not know how long the incentivized will take and did not learn how well they performed in the trial round.<a href="Design.html#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>6.92 to be more precise.<a href="Design.html#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>We named agents and principals as “Person B” and “Person A” respectively. We avoided value loaded terms as well as terms related to natural employment relations. The only employment related term we used was “workload”.<a href="Design.html#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>Each participant drew a seat number. We placed login information composed of a unique username and a unique password on each seat. The usernames thereby referred to either of the roles.<a href="Design.html#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p>We ran additional sessions in the end of January, 2018. The results stemming from the complete data set are not further discussed in this thesis as the data collection was to close to the submission of this document. However, I ran the analysis that I conduct for the 186-participant data set also for the complete set and report the corresponding results in Appendix XY (without commenting them).<a href="Design.html#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>Most of them (33 percent and 12 percent respectively) stated to study Economics and Business or Social Sciences (which includes Economics). Only 2 percent stated to study Psychology and one percent (two subjects) actively stated not to be a student.<a href="Design.html#fnref9" class="footnote-back">↩</a></p></li>
+<li id="fn10"><p>The Psychology Department has a laboratory as well. However, there subject pool is organized by another software than ORSEE, such that we do not know whether subjects have participated in psychological experiments before.<a href="Design.html#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p>Those subjects who showed-up but were rejected to participate, for instance, due to overbooking, received 50 DKK (about 7.5 USD).<a href="Design.html#fnref11" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Predictions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-Design.Rmd",
+"text": "Edit"
+},
+"download": ["gitBook.pdf", "gitBook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Master Thesis: The (hidden) Benefits of Monitoring</title>
+  <meta name="description" content="Master Thesis: The (hidden) Benefits of Monitoring">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Master Thesis: The (hidden) Benefits of Monitoring" />
+  
+  
+  
+
+<meta name="author" content="Hauke C. Roggenkamp">
+
+
+<meta name="date" content="2018-11-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="Predictions.html">
+<link rel="next" href="Analysis.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="" target="blank"> The (hidden) Benefits of Monitoring</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="Design.html"><a href="Design.html"><i class="fa fa-check"></i><b>2</b> Design</a><ul>
+<li class="chapter" data-level="2.1" data-path="Design.html"><a href="Design.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="Design.html"><a href="Design.html#the-real-effort-task"><i class="fa fa-check"></i><b>2.2</b> The Real-Effort Task</a></li>
+<li class="chapter" data-level="2.3" data-path="Design.html"><a href="Design.html#implications"><i class="fa fa-check"></i><b>2.3</b> Implications</a></li>
+<li class="chapter" data-level="2.4" data-path="Design.html"><a href="Design.html#procedural-details"><i class="fa fa-check"></i><b>2.4</b> Procedural Details</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Predictions.html"><a href="Predictions.html"><i class="fa fa-check"></i><b>3</b> Behvioral Predictions</a><ul>
+<li class="chapter" data-level="3.1" data-path="Predictions.html"><a href="Predictions.html#the-self-interested-agents-expected-utility"><i class="fa fa-check"></i><b>3.1</b> The self-interested Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.2" data-path="Predictions.html"><a href="Predictions.html#the-reciprocal-agents-expected-utility"><i class="fa fa-check"></i><b>3.2</b> The Reciprocal Agent’s Expected Utility</a></li>
+<li class="chapter" data-level="3.3" data-path="Predictions.html"><a href="Predictions.html#interim-conclusion"><i class="fa fa-check"></i><b>3.3</b> Interim Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Strategy.html"><a href="Strategy.html"><i class="fa fa-check"></i><b>4</b> Empirical Strategy</a></li>
+<li class="chapter" data-level="5" data-path="Analysis.html"><a href="Analysis.html"><i class="fa fa-check"></i><b>5</b> Analysis</a></li>
+<li class="chapter" data-level="6" data-path="Conclusion.html"><a href="Conclusion.html"><i class="fa fa-check"></i><b>6</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.econ.ku.dk/cee/" target="blank">Centre for Experimental Economics</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Master Thesis: The (hidden) Benefits of Monitoring</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Strategy" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Empirical Strategy</h1>
+<blockquote>
+<p>It is my opinion that an emphasis on the effects of causes rather than on the causes of effects is, in itself, an important consequence of bringing statistical reasoning to bear on the analysis of causation and directly opposes more traditional analyses of causation.
+— <span class="citation">(Holland <a href="#ref-Holland1986">1986</a>)</span></p>
+</blockquote>
+<p>While the previous chapter derived predictions about the causes of effects, this chapter deals with the statistical measurement of effects of these causes. In particular, it describes how one can screen the data that were generated in our experiment to identify and to describe reciprocal behavior, if there is any. The corresponding Appendix XY introduces the empirical workhorse model and derives the <em>identifying assumptions</em> formally. It shows how one can make <em>causal</em> inferences using the experimental data. This chapter mainly argues why the assumptions are reasonable to make in our experimental setting and reports the strategy that results from the formal derivations.</p>
+<p>The first strategy I present is called the <em>scientific solution</em><a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> (see Appendix XY) which is based on the idea that one can use the experiment’s first stage and use it as a control condition which one then compare with the second stage as a treatment condition. In this sense, the treatment can be understood as the exposure to reciprocity. This <em>within</em>-subject design seems reasonable as the game that was played in the first stage is similar to the second stage’s subgame where the agent faces the performance-based mechanism: in both (sub)games, the participants engage in the same real-effort task and are paid proportional to their effort provision. The two (sub)games only differ with respect to (1) the workload decision as well as (2) the social component: The agents’ payoffs from the second stage depend on the principals’ decision (and the principals’ earnings depend on the agents’ decisions). While the latter argument (2) is exactly what should differ between the two treatment conditions, the former (1) should not be much of a problem if the agents chose their optimal level of effort provision in the sequence <em>“find optimal level, then choose workload and perform accordingly”</em>. I believe that this is a reasonable assumption to make, especially because we designed the control questions such that participants must have understood this particular decision to answer them. Hence, they were aware of the decision’s consequences and were forced to choose their effort provision at that point of time. Under this assumption, the workload decision becomes irrelevant for self-interested agents and was just a commitment device for reciprocal agents who intended to punish the principal. Consequently, the workload decision, if anything, is expected to strengthen the effect of reciprocity. In conclusion, I argue that the first stage is as good as <em>ceteris paribus</em> comparable to the respective subgame of the second stage.</p>
+<p>We intend to interpret the observed difference between the productivity in Stage 1 and the performance in Stage 2 as the causal effect of reciprocity. To do so, we have to rule out all factors that can possibly cause a difference. Because the experiment was designed such that each within comparison is based on measurements that were conducted in the same sequence ( <em>“first control then treatment”</em>), we have to rule out that time did not confound the observed difference. After all, it might be that subjects have been tired after running through the box clicking task for the first time. Alternatively, they could have improved their ability to click on boxes as fast as possible during the first stage. One could then argue that the observed difference is not driven by reciprocity, but by learning or fatigue effects. The analysis therefore depends on two postulates called <em>causal transience</em> and <em>temporal stability</em>.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> In broad terms, they mean that the effect the control condition might have on the effort provision in any stage is reversible and that the immediate effect of the control condition is stable (that is, the same at every point in time). These two identifying assumptions are powerful because they allow me to interpret the observed differences as causal as long as they are reasonable. (Note that there is no omitted variable bias because one and the same observation is exposed to the control and the treatment condition.) Whether they are reasonable, is hard to say. The task itself was designed such that no knowledge is needed to complete it. As a consequence, there was no knowledge to gain during the first stage. Also, each participant was exposed to a short trial round which allowed them to acquire the skills even before the first stage began. In addition, there was an extensive break between the two stages due to the control questions. This gave the subjects time to recover. The problem we have is, that we cannot test whether there were learning or fatigue effects which is what qualifies them as postulates. I thus assume them to hold true and leave it to further considerations to design an experimental environment to test them.</p>
+<p>The important question then is, whether the effect, if we observe one, matches my predictions. The following equation, while considering the specific subset of agents that were exposed to the performance-based mechanism in Stage 2 exclusively, describes the observed differences (which we intend to interpret as causal):</p>
+<p><span class="math display">\[
+    \Delta Y_u = \alpha + \beta  Y_{u1} + \upsilon_u
+\]</span></p>
+<p>I use the subscript <span class="math inline">\(u\)</span> to denote agents of this subset and define the left-hand side as the observed differences: <span class="math inline">\(\Delta Y_u \equiv Y_{u2} - Y_{u1}\)</span>. Importantly, <span class="math inline">\(Y_{uT}\)</span> describes what I earlier referred to as the productivity (in <span class="math inline">\(T=1\)</span>) or the performance (in <span class="math inline">\(T=2\)</span>) and which I denoted as <span class="math inline">\(l\)</span> in Chapter XY. <span class="math inline">\(Y_{uT}\)</span> is thus, not to be confused with the reciprocity parameter <span class="math inline">\(Y_{ij}\)</span> from the previous section.</p>
+<p>To understand the regression expression, revisit Figure XY. <span class="math inline">\(\Delta Y_u\)</span> describes the difference between the red curve and the red dashed (<span class="math inline">\(45^{\circ}\)</span>-) line and <span class="math inline">\(Y_{u1}\)</span> constitutes the horizontal axis. The predictions describe a negative difference to the left of <span class="math inline">\(Y_{u1} = 0.5\)</span> and a positive difference on the right of this threshold. Consider now Figure XY, which illustrates the same elements as Figure XY but explains <span class="math inline">\(\Delta Y_u\)</span> at the vertical axis.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">include_graphics</span>(<span class="st">&quot;images/11_OLS_Strategy.pdf&quot;</span>)</code></pre>
+<p>Here, the red line, which I intend to estimate, is predicted to cross the horizontal axis at the threshold (<span class="math inline">\(Y_{u1} = 0.5\)</span>) such that <span class="math inline">\(\Delta Y_u=0\)</span> at this particular point. Considering the regression, this translates into a negative constant (<span class="math inline">\(\alpha &lt; 0\)</span>) as well as a positive slope of <span class="math inline">\(\beta = |2 \cdot \alpha|\)</span> (if one expects the causal effect to be linear).</p>
+<p>While the theory of Chapter XY would be supported by data that are best described by parameters that correspond to these predictions (<span class="math inline">\(\alpha&lt;0\)</span> and <span class="math inline">\(\beta \approx |2 \cdot \alpha|\)</span>), there are, of course, some other scenarios one can think of: If, for instance, <span class="math inline">\(\Delta Y_u\)</span> (and thus <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>) equal zero at any point, one would conclude that reciprocity did not affect the working morale at all and reject my predictions. The second case, where <span class="math inline">\(\Delta Y_u\)</span> is non-zero, is a little more complex to evaluate. If <span class="math inline">\(\alpha \neq 0\)</span> and <span class="math inline">\(beta=0\)</span>, one could reject the predictions as well. (In addition, one might be tempted to reject the assumptions of causal transience and temporal stability: <span class="math inline">\(\alpha &lt; 0\)</span> together with <span class="math inline">\(\beta = 0\)</span>, for instance, implies that, no matter the productivity, the agents are expected to perform worse in Stage 2 compared to Stage 1 – and this could be explained by fatigue. It could, however also mean that participant’s dislike being monitored by a real person.) As a negative <span class="math inline">\(\beta\)</span> stands in stark contrast to my predictions, one could conclude that my predictions turn out to be wrong if <span class="math inline">\(\beta \leqslant 0\)</span>, no matter the constant.</p>
+<p>If, however, <span class="math inline">\(\alpha &lt; 0\)</span> and <span class="math inline">\(0 &lt; \beta &lt; |2 \cdot \alpha|\)</span> or <span class="math inline">\(0 &lt; |2 \cdot \alpha| &lt; \beta\)</span>, the intersection between the horizontal and the regression line would be to the left or to the right of <span class="math inline">\(Y_{u1} = 0.5\)</span>. Would that mean that my predictions were wrong? Not necessarily, as this could be explained by the non-linearity that I described in the end of Section XY and in Figures XY and XY. In some cases, it might therefore become a little vague to judge whether the data actually supports my predictions or proves them wrong.</p>
+<p>To sum up, I have argued that the first stage as well as the second stage (under the performance-based mechanism) only differ in a social dimension that I interpret as the exposure to reciprocity. Given the postulates, I suggest to run a simple OLS regression to estimate the average treatment effect of reciprocity on the agents’ working morale given any observed productivity level. I furthermore indicated which realizations of <span class="math inline">\(\alpha\)</span> and, more importantly, of <span class="math inline">\(\beta\)</span> would prove my predictions wrong and concluded that it is less clear-cut for some realizations of these parameters to judge whether they actually support the data.</p>
+<p>If the mentioned identifying assumptions or postulates, however, are unreasonable, one has to apply the so called <em>statistical solution</em> and compare different subsets of the population of agents with each other. This section, broadly speaking, argues that one can compare agents that share similar, yet not identical, productivities with each other to make inferences about the average effect reciprocity has on their working morale. As before, I use an agent’s productivity as the main explanatory variable. The treatment variable, however, is defined differently since it indicates whether agents are expected to feel treated kindly or unkindly. The agents’ performance in Stage 2 will serve as the response variable in what follows.</p>
+<p>Having that stated, an RDD intends to find a discontinuous jump around the defined threshold. Focusing on the subset of agents who faced the performance-based mechanism one expects the performance of agents with productivities marginally higher than one half to be discontinuously higher than of agents with productivities that is marginally lower. One can therefore say that the agents’ measured productivity assigns them into two treatment conditions which one can call perceived kindness and perceived unkindness. The identifying assumption then is that agents, even while having some influence, are unable to precisely manipulate variable that assigns them into one of the treatment groups.</p>
+<p>I claim that agents do not have perfect control about their productivity. I therefore argue that it is reasonable to make inferences using a RDD strategy. As this is the most important claim concerning this strategy, it deserves some support: First, note that the threshold is arbitrary. Besides its property to assign agents to their treatment condition, it has no further meaning than any of the other values in the neighborhood of <span class="math inline">\(q\)</span>. Also, agents did not know about the importance of this particular value. They, consequently, had no incentive to deliberately manipulate their productivity correspondingly. Second, each participant worked on 25 screens with 35 boxes per screen so that <span class="math inline">\(q\)</span> corresponds to <span class="math inline">\(437.5\)</span> boxes that were clicked away in either <span class="math inline">\(275\)</span> or <span class="math inline">\(175\)</span> seconds. Due to the large number of boxes and the fact that they were ordered randomly<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>, it seems highly doubtful that participants were aware of their score during the task. Hence, even if participants intended to manipulate their productivity to end up just above the threshold, it would have been extremely difficult for them. One might then, however, argue that participants who clicked away <span class="math inline">\(438\)</span> boxes differed in some latent or omitted characteristic from those who clicked away <span class="math inline">\(437\)</span> boxes. But as clean as a lab environment might be, I believe that there are still some environmental factors that affected this quantum leap-sized difference. Take the computer mice, the tables’ textures, the sunlight or the air quality during the sessions as an example. On an individual level, the smallest lag of the computer, a sneezer or the sunlight that might interfere with the graphics on the screen at some corners of the laboratory can make out the difference between productive and unproductive agents. All these factors might make out the difference and cannot be controlled by the participants. So even if some are especially likely to have productivity values near one half, each of these agents would have approximately the same probability of being productive (slightly above <span class="math inline">\(q\)</span>) or unproductive (slightly below <span class="math inline">\(q\)</span>) – similar to a coin-flip experiment. As such, assignment into treatment is as good as random (around the threshold). Consequently, agents with a productivity of <span class="math inline">\(q \pm \varepsilon\)</span> with <span class="math inline">\(\varepsilon \to 0\)</span> are, on average, expected to be comparable – they should not differ systematically in any characteristic that could confound my analysis. Note that this assumption is not a postulate, that is, one can test whether it is reasonable. We can, for instance look at the covariates of those who are just below and just above the threshold. One also has to plot the distribution of <span class="math inline">\(Y_1\)</span> to spot whether the values are distributed unevenly around <span class="math inline">\(q\)</span>. If all these variables are distributed smoothly, the identifying assumption is likely to be met.</p>
+<p>Depending on what the data will look like eventually, a concern might be that a possible discontinuity around the threshold is unaccounted-for non-linearity. %: The jump in upper panel of Figure XY, is likely to disappear if one takes into account that the data is censored at zero.
+To contest such a concern one can run different specifications (including polynomials) or focus on the <em>“discontinuity sample”</em> – that is, focus on observations close to the threshold <span class="citation">(Angrist and Lavy <a href="#ref-AngristLavy1999">1999</a>)</span> as explained above. As one does not need any polynomials or specifications that are complex in another sense, one can also describe the latter approach as non-parametric. Another robustness check I suggest is to run <em>“placebo RDDs”</em>. The idea here is to choose some random productivity values (maybe in advance to seeing the data) and to pretend these values to be the threshold. If the resulting RDDs detect discontinuities at these random values, one might doubt the original discontinuity to be caused by reciprocity.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> To run these checks, I programmed a <a href="https://roggenkamp.shinyapps.io/ShinyRDD/">ShinyApp</a>.</p>
+<p>In summary, this strategy deviates from the theoretical predictions as it assumes the causal effect of reciprocity not to be a smooth function. If this was true, and if there was a causal effect in the first place, it should be identified using a non-parametric RDD as described above. Compared to the linear OLS specification, it has the advantage that it allows us to not only focus on the agents who were exposed to the performance-based mechanism, but also to narrow in on the agents who faced the random mechanism. After all, the theory from Chapter XY also applies to those subjects: they should perceive the choice of the random-mechanism as kind (unkind) if they were unproductive (productive). A second advantage is that it can, in principle, be applied even if causal transience and temporal stability are unreasonable to assume. This comes, however, at the costs that the analysis might be labeled as explorative since the discontinuity clashes with the predictions I derived earlier. In addition, there have to be enough data points in the neighborhood of <span class="math inline">\(q\)</span>, which is not yet the case with our data.</p>
+
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Holland1986">
+<p>Holland, Paul W. 1986. “Statistics and Causal Inference.” <em>Journal of the American Statistical Association</em> 81 (396). [American Statistical Association, Taylor &amp; Francis, Ltd.]: 945–60.</p>
+</div>
+<div id="ref-AngristLavy1999">
+<p>Angrist, Joshua D, and Victor Lavy. 1999. “Using Maimonides’ Rule to Estimate the Effect of Class Size on Scholastic Achievement.” <em>The Quarterly Journal of Economics</em> 114 (2). MIT Press: 533–75.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="17">
+<li id="fn17"><p>These postulates are the reason the section was coined as the “scientific solution” as the natural sciences proceeded far by making these assumptions. If you, for instance, throw a stone within an absolute vacuum to make inferences about the effect of the vacuum on some variable as the distance and then compare it to a comparable throw under “normal” conditions, you have to make these two assumptions. You assume that the stone would land at the same distance no matter at which point of time you throw it (moon phases do not affect anything here) and that throwing the stone in the vacuum does not change its flying characteristics for a later throw.<a href="Strategy.html#fnref17" class="footnote-back">↩</a></p></li>
+<li id="fn18"><p>These assumptions reflect what I called “separability of effort costs” before.<a href="Strategy.html#fnref18" class="footnote-back">↩</a></p></li>
+<li id="fn19"><p>The arrangement of boxes differed between the screens but was identical for all participants, given any specific screen.<a href="Strategy.html#fnref19" class="footnote-back">↩</a></p></li>
+<li id="fn20"><p>The placebo approach is often used in Diff-in-Diff Designs.<a href="Strategy.html#fnref20" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Predictions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-Strategy.Rmd",
+"text": "Edit"
+},
+"download": ["gitBook.pdf", "gitBook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
