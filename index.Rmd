@@ -5,25 +5,11 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
+always_allow_html: yes
 bibliography: [references.bib]
 biblio-style: apalike
 link-citations: yes
 ---
-
-```{r libraries, include = FALSE}
-listOfPackages <- c("knitr"
-                    )
-
-newPackages <- listOfPackages[!(listOfPackages %in% installed.packages()[, "Package"])]
-
-if(length(newPackages) > 0){
-        install.packages(newPackages)
-}
-
-for(package in listOfPackages){
-        require(package, character.only = TRUE)
-}
-```
 
 # Introduction {#Intro}
 

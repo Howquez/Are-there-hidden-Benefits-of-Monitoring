@@ -1,3 +1,6 @@
 # Analysis {#Analysis}
 
-lipsum
+```{r, echo = FALSE}
+scatter1
+```
+

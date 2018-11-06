@@ -1,0 +1,3 @@
+[
+["Analysis.html", "Section 5 Analysis", " Section 5 Analysis getwd() ## [1] &quot;/Users/haurog/Desktop/Paper/Are-there-hidden-Benefits-of-Monitoring&quot; list.files(&quot;_Analysis/01_Code&quot;) ## [1] &quot;00_FakeData.R&quot; &quot;01_ReadData.R&quot; &quot;02_Analysis.R&quot; ## [4] &quot;03_Visualization.R&quot; # source(&quot;_Analysis/01_Code/01_ReadData.R⁩&quot;) # source(&quot;_Analysis/01_Code/02_Analysis.R⁩&quot;) # source(&quot;_Analysis/01_Code/03_Visualizations.R⁩&quot;) "]
+]

@@ -2,4 +2,3 @@ book_filename: "thesis"
 chapter_name: "Section "
 download: [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"]]
 delete_merged_file: true
-

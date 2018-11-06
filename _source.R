@@ -1,6 +1,8 @@
 # Install Packages -----
 listOfPackages <- c("knitr",
-                    "bookdown"
+                    "bookdown",
+                    "magrittr",
+                    "highcharter"
 )
 
 newPackages <- listOfPackages[!(listOfPackages %in% installed.packages()[, "Package"])]
@@ -12,6 +14,13 @@ if(length(newPackages) > 0){
 for(package in listOfPackages){
         require(package, character.only = TRUE)
 }
+
+# Analysis -----
+
+source("_Analysis/01_Code/01_ReadData.R⁩")
+source("_Analysis/01_Code/02_Analysis.R⁩")
+source("_Analysis/01_Code/03_Visualizations.R⁩")
+
 
 # Create docs folder and nojekyll needed to publish the html output -----
 dir.create("docs", showWarnings = FALSE)
