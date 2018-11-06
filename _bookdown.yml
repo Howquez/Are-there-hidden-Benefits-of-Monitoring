@@ -1,0 +1,6 @@
+book_filename: "gitBook"
+language:
+  ui:
+    chapter_name: "Section "
+delete_merged_file: true
+

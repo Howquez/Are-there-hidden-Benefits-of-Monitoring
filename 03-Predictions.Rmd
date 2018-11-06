@@ -1,0 +1,229 @@
+# Behvioral Predictions {#Predictions}
+
+> "To create a model, then, we make choices about what's important enough to include, simplifying the world into a toy version that can be easily understood and from which we can infer important facts and actions."
+> --- [@MathDestruction]
+
+We implemented a simple real-effort task where a participant's actions affected only her own payments in the first stage. We then adapted the game to a principal-agent setting in Stage 2. Because we are interested in social preferences, I focus on the second stage in what follows (and touch on the first stage whenever it eases the comprehension). 
+
+The behavioral predictions for our experiment depend on the subjects' preferences and the corresponding assumptions. I consider two cases: One in which agents are self-interested, that is, they are only interested in maximizing their own utilities, and one where they have social preferences that are described by models of intention-based sequential reciprocity. I predict that self-interested agents, who are exposed to the performance-based mechanism, supply similar levels of effort in Stage 2 as in Stage 1. Reciprocal agents, in contrast, are predicted to deviate from their first stage effort provision. Note that we are not interested in the standard case in and of itself -- it simply serves as a reference point to contrast the intention-based reciprocity predictions.
+
+The principals' preferences do not affect the empirical analyses of the agents' behavior much. For this reason, I assume them to be self-interested throughout the whole analysis and do not focus on their decisions in this thesis. I derive the predictions for the standard case, the self-interested preferences, first before I move to the reciprocity driven social preferences. 
+To reiterate, the setup in Stage 2 depicted in Figure XY is the following: The principal ($j$) decides whether she monitors the agent by choosing a mechanism that determines her payment. I refer to this variable as $\mu \in (\text{random, performance})$ where I abbreviate the random mechanism with $\rho$ and the performance-based mechanism with $\varphi$ to improve the readability of the formal expressions in what follows.
+The agent, by contrast, has two choice variables: $n$, which is her workload measured as the number of screens she intends to work on, and her performance $l \in [0,1]$, with a ceiling determined by her choice of $n$ with $\{ n \in \mathbb{R}^{+} | 1 \leq n \leq 25 \}$. $c(l)$ describes her costs of providing effort. Agents are paid a fixed salary $w$ and might receive an additional bonus payment $b$. In case the payment is not performance-based ($\mu \neq \varphi$), the agent receives a payment which is determined in a random procedure ($\mu = \rho$), where she receives the bonus payment with an exogenously set probability of $q \equiv \frac{1}{2}$. For each percentage point of the total number of boxes clicked away (which is the exact definition of $l$), the principal receives one DKK such that she will be paid a _relative_ "piece rate" of $l$ DKK. In addition, she receives a fixed payment of $\varepsilon \equiv 340$ DKK to avoid bankruptcies. 
+
+Since the last mover is _0_ (_chance_), the game's final actions are explicit randomizations. I assume that the other two (human) players will not solely focus on the specific realizations of payoffs but calculate their _expected_ monetary payoffs to develop their behavioral strategies. Stylizing this thought, one can imagine a reduced form _two_-player game as illustrated below in Figure XY. This assumption ultimately has an attribution theory style implication as participants who think in expected payoffs do not blame chance for particularly low outcomes that might occur. Instead, agents hold their matched principal accountable for the relatively high or low _expected_ outcome they are facing.
+
+```{r reducedForm, eval = FALSE, fig.cap="Reduced Form | Stage 2", out.width='80%', fig.asp=.75, fig.align='center'}
+include_graphics("images/20171127_GameTree")
+```
+
+To describe the agent's behavior (I focus on the eventual effort provision $l$ and neglect the workload decision $n$), I consider a standard model of effort provision with a utility function, that is separable in the subject's utility from her payment $\pi \in (w, w+b)$, her costs $c(l)$ stemming from her effort provision and her intrinsic motivation $\sigma \in (0, 1)$ she derives from working on the task. 
+
+## The self-interested Agent's Expected Utility
+
+I start by deriving an agent's motives to exert effort by analyzing the strategic environment every participant (agents and principals) faces in the first stage. For simplicity, I focus on a representative (that is, homogenous) agent's ($i$'s) motives as they can easily be transferred to a principal. Like in Stage 2, each agent is rewarded with a flat wage. Whether the agent receives the bonus is determined by a performance-based mechanism that is identical to the one the principal can choose in Stage 2. The first stage's effort provision $l^{1^{st}}$ is an independent measure of effort provision as it stems from a two-player game where only one human participant interacts with an artificial chance player. As mentioned, I refer to $l^{1^{st}}$ as _productivity_. In conclusion, one can stylize the game in Stage 1 as follows: the higher a participant's productivity, the higher the likelihood of receiving the bonus payment. Formally: 
+
+$$
+\mathbb{E}[\pi_i^{1^{st}}(l)] = l(w+b) + (1-l)w = w + l \cdot b
+$$
+
+Considering a participant's costs of effort as well as her intrinsic motivation one can derive her utility function and solve the maximization problem:
+
+$$
+	U_i(l, c(\cdot), \sigma)		=  w + l \cdot b - c(l) + \sigma \cdot l\\
+	\Rightarrow c_l(l^{1^{st}})	= b + \sigma\\
+	\Leftrightarrow l^{1^{st}}	= c_l^{-1}(b + \sigma)
+$$
+
+$c_l(\cdot)$ thereby denotes the derivative of the cost function with respect to the effort level $l$ (the marginal costs of effort) and $c_l^{-1}(\cdot)$ denotes the inverse of the marginal cost function. Because $c(l)$ is assumed to be convex, $c_l(l)$ is increasing and so is its inverse $c_l^{-1}(\cdot)$. From here it follows that
+
+1.  $l^{1^{st}}$ increases in the intrinsic as well as the variable extrinsic motivation and that
+2.   a self-interested subject chooses effort up to the point where the sum of both (intrinsic and variable extrinsic motivation) equals her marginal costs of effort.
+
+In the second stage, the agent's expected monetary payoff is slightly more complex since it does not only depend on her own effort in Stage 2, $l^*$, (which I call her _performance_) but also on another variable: the principal's binary monitoring decision. We'll therefore have to consider two cases resulting from either a random ($\rho$) or a performance-based mechanism ($\varphi$).
+
+$$
+	\mathbb{E}[\pi_i(l)|\rho]		 = q(w+b)+(1-q)w\\
+						= w + q \cdot b\\
+	\mathbb{E}[\pi_i(l)|\varphi] = \mathbb{E}[\pi_i^{1^{st}}(l)]\\
+						= w + l \cdot b
+$$
+
+These two functions, along with the principal's expected monetary payoff, are visualized in an interactive _ShinyApp_ I programmed and archived [here](https://roggenkamp.shinyapps.io/shiny_expectations).^[If you focus on the principal's (Person A's) earnings, you will see that the principal's earnings were strictly increasing in the agent's performance so that she had a monetary incentive to induce effort.] Adding the costs of effort as well as the intrinsic motivation yields the following first-order conditions:
+
+$$
+	\frac{\partial U_i}{\partial l} = 
+		\begin{cases}
+			\sigma - c_l(l) \ \Rightarrow \sigma = c_l(l^*_\rho)  & 
+			\Leftrightarrow l^*_\rho = c_l^{-1}(\sigma)\\
+			b + \sigma - c_l(l) \ \Rightarrow b + \sigma = c_l(l^*_\varphi)  & 
+			\Leftrightarrow l^*_\varphi = c_l^{-1}(b +\sigma) = l^{1^{st}}
+		\end{cases}
+$$
+
+Hence, the agent will choose effort up to the point where the sum of her intrinsic and variable extrinsic motivation, if any, equals her marginal costs of effort. Because $c_l^{-1}(\cdot)$ is increasing and because $b>0$, it follows that  $l^*_\varphi  \geqslant l^*_\rho$. In summary, I predict that:
+
+```{r selfPrediction,  eval = FALSE, fig.cap="Predicted behavior for purely self-interested agents", out.width='80%', fig.asp=.75, fig.align='center'}
+include_graphics("images/00_Self_Prediction.pdf")
+```
+
+
+> A purely-self interested agent's performance, given a performance-based mechanism, will equal her productivity.
+>
+> A purely-self interested agent will perform better (that is, she will click on more boxes) if she faces the performance-based instead of the random mechanism.^[Note that her effort provision will, in the case of a random mechanism, only equal zero if her intrinsic motivation she derives from clicking boxes is zero as well.]
+```
+
+These predictions are conceptualized in Figure XY where the yellow line could have any non-negative slope (which is defined by $\sigma$). However, they  hinge on the implicit assumptions that (1) an agent does neither learn (thus improve her ability to perform the box clicking task) nor fatigue (thus worsen her ability) and that (2)  $\sigma$ does not depend on the mechanism $\mu$ such that $\sigma(\rho) = \sigma(\varphi) = \sigma$. This translates into the assumption that the mechanism itself does not crowd out an agent's intrinsic motivation. ^[The subsequent section will show how _the choice of_ the mechanism can crowd out intrinsic motivation.]
+
+Our design does not allow us to test any of these assumptions which classifies them as _postulates_. While I already argued that neither learning nor fatigue should be a concern here, the latter assumption deserves attention given the literature on the crowding-out effect of intrinsic motivation due to monetary incentives (see [@FreyOberholzer] for a general overview, [@Tirole2003] for a theoretical discourse or [@Dickinson2008] as well as [@Frey1993] for papers that are closely related to this thesis) since the monetary incentive scheme is the key difference between the two mechanisms $\rho$ and $\varphi$.
+
+Explanations for the prevalence of a crowding-out effect due to monetary incentives require factors such as close relations between principals and agents, the prevalence of a less knowledgeable agent (compared to the principal) or agents who generate profit for the principals and have concerns about how the profit is distributed. None of these factors seem to confound the predictions in our setting as the relation between principals and agents is abstract and impersonal, as the agent has more and better information about herself as well as her performance in the two box-clicking tasks and because the distributional concerns (regarding the principal's income) are driven by reciprocity, which is the very subject of the following subsection and this thesis in general.
+
+## The Reciprocal Agent's Expected Utility
+
+The basic intuition of the notion of reciprocity that I apply in this paper is that people respond kindly (unkindly) if they perceive actions of others as kind (unkind). As before, I will focus on the agent in our setting and apply this notion of reciprocity formally. To be more precise, I will base my considerations on the model of [@Kirchsteiger2004]. Even though there is an uninterested chance player incorporated in our design, I do not need to involve her in the analysis as Sebald's [@Sebald2010] model would allow me to do. I focus on the expected outcomes as illustrated in Figure XY and omit the chance player. 
+
+Like [@Kirchsteiger2004] as well as [@Sebald2010], I denote $b_{ij}$ as player $i$'s belief about player $j$'s strategy (first-order belief) and $c_{iji}$ as player $i$'s belief about player $j$'s belief about player $i$'s strategy (second-order belief). Players update their first- and second-order beliefs and strategies as soon as they learn the other player's actions which is why they depend on the history $h$. $a_i(h)$ describes the (updated) behavioral strategy that prescribes the same choices as $a_i$ except for the choices player $i$ has already made at $h$ (since they are consequently made with probability 1). 
+Incorporating the intrinsic motivation again, the agent's utility function, is assumed to look as follows:
+
+$$
+	U_i(a_i(h), (b_{ij}(h))_{j \neq i}, (c_{iji}(h))_{j \neq i}) = \ \pi_i(a_i(h), (b_{ij}(h))_{j \neq i})\\
+	+ Y_{ij} \cdot \kappa_{ij}(a_i(h), (b_{ij}(h))_{j \neq i}) \cdot \lambda_{iji}(b_{ij}(h), (c_{iji}(h))_{j \neq i})\\
+	- c_i(a_i(h))\\
+	+ \sigma \cdot a_i(h)
+$$
+
+According to this function, the agent's utility consists of four components: her expected material payoff, her psychological payoff, her costs of  effort as well as her intrinsic motivation. The psychological payoff (the second term) includes a non-negative reciprocity parameter $Y_{ij}$ describing her sensitivity towards the matched principal's (un)kindness, her (un)kindness towards the principal $\kappa_{ij}$ as well as her perceived (un)kindness of the principal towards her $\lambda_{iji}$. Note that a reciprocity parameter of zero would describe a special case where an agent is not motivated by (intention-based) social preferences. In other words, a utility function with $Y_{ij} = 0$ would equal the purely self-interested case from above.
+
+Before I derive explicit predictions concerning the reciprocal agent's behavior, I will focus on the elements that represent the psychological payoff. The original model's kindness function $\kappa_{ij}$ implies that an agent evaluates her kindness towards the principal by comparing the payoff she grants the principal by her chosen action compared to what she could have given her -- and she applies a similar mindset when evaluating the perceived kindness of the principal towards her ($\lambda_{iji}$). Formally,
+
+$$
+	\kappa_{ij}(a_i(h), (b_{ij}(h))_{j \neq i}) = \pi_j(a_i(h), (b_{ij}(h))_{j \neq i}) - \pi_j^{e_i}((b_{ij}(h))_{j \neq i})
+$$
+
+where $\pi_j^{e_i}( \cdot )$ describes a $j$'s equitable payoff that is affected by $i$. In the original paper, it is defined as
+
+$$
+	\pi_j^{e_i}((b_{ij}(h))_{j \neq i}) = \frac{1}{2}  \Big[max\big\{\pi_j(a_i(h), (b_{ij}(h))_{j \neq i}) \  | \ a_i(h) \in (0, 1) \big\}\\
+	 + min\big\{\pi_j(a_i(h), (b_{ij}(h))_{j \neq i}) \ | \ a_i(h) \in (0, 1) \big\} \Big]
+$$
+
+which basically means that the equitable payoff is a virtual average payoff that $i$ can grant $j$.^[In fact, the original equitable payoff is slightly different since it conditions the strategies to be part of a efficient space. There are, however, no inefficient strategies in our setting which is why I changed the corresponding formula slightly.] If the eventual payoff $j$ receives due to $i$'s action is higher than this average, $i$ considers herself as kind towards $j$.
+
+I generally agree with the concept of an equitable payoff as a reference point and apply it later to evaluate the agents' _perceived_ kindness. However, for the agent's evaluation of her own kindness towards the principal, I deviate from Dufwenberg and Kirchsteiger's [@Kirchsteiger2004] approach to determine it in the following way, since I believe that the original model does not fit into our setting:
+
+$$
+	\pi_j^{e_i}((b_{ij}(h))_{j \neq i}) \equiv \pi_j(l^{1^{st}}_i, (b_{ij}(h))_{j \neq i}) 
+$$
+
+with $l^{1^{st}}_i \in [0, 1]$ as the agent's productivity measured in the first stage. The rationale behind this is simple: I believe that agents are heterogeneous with respect to their productivity (their cost functions) and that an agent's inherent productivity is the best predictor of how well a particular agent can perform in the future. In other words, I expect an agent to be able to more or less replicate the effort provision from the first stage if she faces an identical strategic environment. Most importantly, I assume that subjects hold the belief that they could replicate their own effort and that they hold the same beliefs about others ($j$ believes that $i$ can easily replicate $i$'s productivity from Stage 2 in Stage 1). Given this, Dufwenberg and Kirchsteiger's [@Kirchsteiger2004] definition of an equitable payoff does not make much sense since it would translate into an equitable payoff resulting from a performance of $\frac{1}{2} \cdot (0 + 1)$ irrespective of the idea that an agent could not possibly bring forth a performance of 100% due to a low productivity. Because it does seem even less intuitive and somehow arbitrary that an agent considers a payoff resulting from a performance of half her productivity $\frac{1}{2} \cdot (0 + l^{1^{st}}_i)$ as equitable, I suspect $\pi_j(l^{1^{st}}_i, (b_{ij}(h))_{j \neq i})$ to be the best candidate for the fairness norm  the equitable payoff was intended to represent. 
+
+This assumption is quite important as it sets the course for our analysis of kind or unkind behavior: kindness (unkindness) is identified as an increased (decreased) effort provision between the productivity in the first stage, $l^{1^{st}}_i$, and the performance in the second stage, $l(h)$: 
+
+$$
+	\kappa_{ij}(l(h), (b_{ij}(h))_{j \neq i})  = \pi_j(l(h), (b_{ij}(h))_{j \neq i}) - 
+	\pi_j(l^{1^{st}}_i, (b_{ij}(h))_{j \neq i})
+$$
+
+where I substituted $a_i(h) = l(h) $. This implies that an agent first chooses her effort at history $h^1$ or $h^2$ and then chooses her workload $n$ subject to her effort decision.
+
+Remember that the principal's earnings consisted of several components. In particular, her material payoff was designed as follows: $\pi_j \equiv \varepsilon + l - \pi_i(l,\mu) - c(\mu)$ where $\varepsilon$ is a constant that is commonly known. Because the principal chooses $\mu$ before the agent makes her first move, the agent knows with certainty which mechanism was chosen by the principal when she evaluates her kindness at h^1^ or h^2^. She thus knows the principal's costs $c(\mu)$ and is able to infer the expected salary which she will receive from the principal ($\pi_i(l,\mu)$). Consequently, she knows each of the components that constitute the principals earnings. It thus suffices to only consider the agent's effort provision in either h^1^ or h^2^ to form $\pi_j^{e_i}$ and $\kappa_{ij}$ as everything else cancels out. This means that the agent's effort provision is the only channel to exhibit kindness or unkindness. Given that the subgame of the second stage where the principal chooses the performance-based mechanism is very similar to the first stage, I understand an increased effort provision ($l^*_\varphi - l^{1^{st}}_i < 0$) as an expression of kindness and a decreased effort provision ($l^*_\varphi - l^{1^{st}}_i > 0$) as an expression of unkindness.
+
+Similarly to $\kappa_{ij}(\cdot)$ in the original paper, the _perceived_ kindness $\lambda_{iji}(\cdot)$ is expressed difference between an equitable payoff and the actual payoff -- the two functions are, _prima facie_, mathematically equivalent.
+
+$$
+	\lambda_{iji}(b_{ij}(h), (c_{iji}(h))_{j \neq i}) = \pi_i(b_{ij}(h), (c_{iji}(h))_{j\neq i}) - \pi_i^{e_j}((c_{iji}(h))_{j\neq i})
+$$
+
+In contrast to $\pi_j^{e_i}$, I find it practical to form the equitable payoff the agent can receive from the principal ($\pi_i^{e_j}$) as in the original paper because the principal has a binary set of actions $\mathcal{A}_j = \{\rho,\varphi\}$. 
+
+$$
+	\pi_i^{e_j}((c_{iji}(h))_{j \neq i}) = \frac{1}{2}  \Big[\big\{\pi_i(\rho, (c_{iji}(h))_{j \neq i}) \  | \ c_{iji}(h)_{j \neq i} \in (0, 1) \big\}\\
+ +\big\{\pi_i(\varphi, (c_{iji}(h))_{j \neq i}) \  | \ c_{iji}(h)_{j \neq i} \in (0, 1) \big\} \Big]
+$$
+
+Assuming an agent's performance not to equal one half, the two choices yield two different expected payoffs for the agent. Because the equitable payoff is the average of both of them, there will always be one action that leads to a payoff that is higher than the equitable payoff while the opposite choice will lead to a payoff that is lower. As a consequence, the agent will eventually perceive one action as kind while she will perceive the other one as unkind. Formally:
+
+$$
+	\pi_i^{e_j}((c_{iji}(h))_{j \neq i}) 
+	=  \ w + \frac{1}{2} \cdot b \cdot (c_{iji}(h)_{j\neq i} + q)\\
+	 \\
+	\Rightarrow \lambda_{iji}(\rho(h^1), (c_{iji}(h^1))_{j \neq i}) =  \ w + q \cdot b - w - 
+	\frac{1}{2} \cdot b \cdot(c_{iji}(h^1)_{j\neq i} + q)\\
+	=  \ \frac{1}{2} \cdot b \cdot (q - c_{iji}(h^1)_{j\neq i})\\
+	 \\
+	\Rightarrow \lambda_{iji}(\varphi(h^2), (c_{iji}(h^2))_{j \neq i}) =  \ w + c_{iji}
+	(h^2)_{j\neq i} \cdot 
+	b - w - \frac{1}{2} \cdot b \cdot(c_{iji}(h^2)_{j\neq i} + q)\\
+	=  \ \frac{1}{2} \cdot b \cdot (c_{iji}(h^2)_{j\neq i} - q)\\ 
+$$
+
+Which action an agent perceives as kind (unkind) therefore depends on the agent's second-order belief, $c_{iji}(h)$ -- what the agent believes the principal to believe about the agent's performance in the second stage. 
+
+The divisive question now is, how this second-order belief is formed. Given that the agent knows that the principal learned her productivity in the first stage, I find it most intuitive to set $c_{iji}(h) \equiv l^{1^{st}}_i$. This implies that the agent believes that the principal makes her decision expecting the agent to replicate her effort provision from the first stage. At this point, it is important to note that this belief is only reasonable for the performance-based mechanism ($\varphi$) as the choice of $\varphi$ puts the agent into a similar strategic environment with identical material incentives as in the first stage. The important difference is that the principal is responsible for the subgame the agent finds herself in -- but note that I assume the second-order beliefs to neglect this difference: by setting $c_{iji}(h) \equiv l^{1^{st}}_i$, I implicitly assume that the agent does not expect the principal to consider the impact of her decision on the agent's psychological payoff. (Incorporating reciprocity considerations into the second-order beliefs would, however, not affect the predictions much as I will show below.) 
+
+Alternatively, the material incentives between the first and the second stage differ starkly if the principal chooses $\rho$. It is therefore hard to make inferences about $c_{iji}(h^1)$. Sure, a smart principal would anticipate that the agent has no material incentive to exert effort, and assume that she exerts effort up to the point where the absolute value of her costs of effort equal her intrinsic motivation and, perhaps, she would even take her psychological payoff into account. But would the agent believe the principal to have such elaborated beliefs about the agent's effort provision? After all, the agent knows that the principal neither has  isolated information about her intrinsic motivation nor about her reciprocity parameter $Y_{ij}$. Due to the lack of information, I neglect the agents who are facing the random mechanism and concentrate on those who exert effort under the performance-based mechanism. Doing so, I consider $\rho$ only as an alternative to $\varphi$ which allows us to trigger emotions of kindness or unkindness because the principal's choice of $\varphi$ could have been better (or worse) for an agent with a particular productivity.
+
+Consider $\lambda_{iji}$ in the branches that follow history $h^2$ for two agents with different productivities, $\underline{l}^{1^{st}}_n < q < \overline{l}^{1^{st}}_m$. The less productive agent $n$ will perceive the choice of the performance-based mechanism as unkind while $m$ will perceive it as kind because
+
+$$
+	\lambda_{njn}(\varphi(h^2), \underline{l}^{1^{st}}_n(h^2)) =  \
+	 	\frac{1}{2} \cdot b \cdot (\underline{l}^{1^{st}}_n - q) < 0 \\
+	\text{and}\\
+	\lambda_{mjm}(\varphi(h^2), \overline{l}^{1^{st}}_m(h^2)) =  \ 
+		\frac{1}{2} \cdot b \cdot (\overline{l}^{1^{st}}_m - q) > 0 .
+$$
+Conversely, they will perceive the choice of the random mechanism as kind and unkind, respectively. Importantly, one and the same mechanism can therefore be perceived as kind or unkind. This is the main feature of our design which we want to exploit to investigate hidden costs _and_ benefits of monitoring. 
+
+As the psychological payoff is the product of  $Y_{ij}$, $\kappa_{ij}(\cdot)$ and $\lambda_{iji}(\cdot)$, it is easy to see that a negative $\lambda_{iji}(\cdot)$ must be met by a negative $\kappa_{ij}(\cdot)$ to maximize this product if $Y_{ij}>0$. Likewise, a positive $\lambda_{iji}(\cdot)$ must be met by a positive $\kappa_{ij}(\cdot)$. These two insights mirror the basic notion of reciprocity -- tit for tat.
+
+Putting all these pieces together, the utility function of agents who faced the performance-based mechanism looks as follows
+
+$$
+	U_i(l_i | \varphi) = \ w+ b \cdot l_i\\
+				 + Y_{ij} \cdot [l_i - l_i^{1^{st}}]  \cdot [\frac{1}{2} \cdot b \cdot 
+				    (l_i^{1^{st}} - q)] \\
+				 - c(l_i)\\
+				 + \sigma \cdot l_i
+$$
+
+and is solved by $l^*_i = c_l^{-1}(b + \sigma + Y_{ij} \cdot [\frac{1}{2} \cdot b \cdot (l_i^{1^{st}} - q)])$. Note that the equilibrium effort provision under the performance-based mechanism in the second stage looks similar to the first stage's equilibrium effort provision ($l_i^{1^{st}} = c_l^{-1}(b +\sigma)$). The only difference is that the perceived kindness now is a part of the first-order condition. Remember that $c_l^{-1}(\cdot)$ is assumed to be an increasing function (due to the convex cost function) such that $l^*_i > l_i^{1^{st}}$ if $l_i^{1^{st}} > q$ and if $Y_{ij}>0$. Similarly, $l^*_i < l_i^{1^{st}}$ if $l_i^{1^{st}} < q$ and if $Y_{ij}>0$. To put it more verbally, I predict that:
+
+
+> Reciprocal agents with a productivity lower than $q = \frac{1}{2}$ perform worse in the second stage than they did before if their matched principal chooses the performance-based mechanism. That is, the principal suffers hidden costs of monitoring.
+
+> Reciprocal agents with a productivity higher than $q$ perform better in the secondstage than they did before, if their matched principal chooses the performance-based mechanism  (such that the principal gains hidden benefits of monitoring).
+
+```{r socialPrediction, eval = FALSE, fig.cap="Predicted behavior for reciprocal agents", out.width='80%', fig.asp=.75, fig.align='center'}
+include_graphics("images/00_Social_Prediction.pdf")
+```
+
+Assuming $c_l^{-1}(\cdot)$ to be a linear increasing function, these predictions are outlined in Figure XY which is based on Figure XY. The graph contains dashed and solid lines. The colored dashed lines mirror the predictions of the previous subsection which concern purely self-interested agents. The solid red line illustrates the predicted behavior of reciprocal agents who face the performance-based mechanism. Comparing the different predictions (that is, the solid and the dashed red lines) one recognizes the hidden costs to the left as well as the hidden benefits of monitoring on the right of $q =\frac{1}{2}$ (the vertical dashed line) as the solid line appears to be rotated counter-clockwise.
+
+Consider now the case where the agent has more sophisticated second-order beliefs where she assumes the principal to be mindful of her psychological payoff and denote this second-order belief as $\tilde{l}_i$. We already know that an agent with $\underline{l}^{1^{st}}_i < q$ perceives the choice of $\varphi$ as unkind and thus decreases her effort provision (because $l_i^*$ is increasing in $\lambda_{iji}(\cdot)$).  An agent who believes that the principal anticipates this behavior would then perceive the principal's choice of $\varphi$ as even less kind (or ``more unkind'') because she would believe that the principal believes that she would exert an effort of $\tilde{l}_i < \underline{l}^{1^{st}}_i < q$. In the end, low performances worsen the chance to receive the bonus payment (especially compared to the chances the same agent would have under the choice of $\rho$). This would, however, not make much sense as the agent knows that it would also be against the interest of the principal to decrease the agent's effort provision. In contrast, an agent with $\overline{l}^{1^{st}}_i > q$ considers the choice of $\varphi$ as kind because it improves her chance to receive the bonus payment in the case where the psychological payoff was incorporated. If the agent believes the principal to believe that the agent would exert $q < \overline{l}^{1^{st}}_i < \tilde{l}_i$, it would result that $\lambda_{iji}(\varphi(h^2), \overline{l}^{1^{st}}_i(h^2)) < \lambda_{iji}(\varphi(h^2), \tilde{l}_i(h^2))$. Because the equilibrium effort provision increases in $\lambda(\cdot)$ a high $\tilde{l}_i$ goes hand in hand with a high $l_i^*$. Incorporating the psychological payoff into the second-order beliefs would therefore result either in an unreasonable belief (which might very well be replaced by $c_{iji}(h) = l^{1^{st}}_i$) or in a belief which reinforces itself.
+
+Importantly, the original model does not incorporate the intrinsic motivation $i$ draws from her work on the effort task. Instead, it only considers a material and a psychological payoff. The latter only depends on the material payoffs and a set of first- and second-order beliefs. Even if the intrinsic motivation is stable and not affected by the principal's ($j$'s) choice $\mu$, it would be difficult to incorporate $\sigma$ into the fairness considerations of the psychological payoff. The problem is that the model would require the agent to form second-order beliefs about her intrinsic motivation and her equilibrium effort provision under different mechanisms to come up with $\pi_i^{e_j}$. This aggravation alone would blow up the model such that its predictive power would be reduced. Since we, as the researchers, as well as the participants do not have any isolated information about an agent's intrinsic motivation, I keep the model simple and retrain from considering the intrinsic motivation within the psychological payoff.
+
+The most important caveat of this chapter is not that it is so rich in assumptions but, if anything, that it lacks assumptions one would need to make quantitative predictions. In particular, I made rather vague yet reasonable and therefore popular assumptions concerning the agents' costs of effort by stating that they are convex, bijective, increasing and equal to zero if the level of effort provided is zero as well. This allows me to analyze the inverse of the marginal cost function: As $c(\cdot)$ is convex and increasing, its derivative $c_l(\cdot)$ is non-negative and increasing. As a consequence, $c_l^{-1}(\cdot)$ is increasing and non-negative as well. However, I do not know (or do not assume to know) whether $c_l^{-1}(\cdot)$ is convex, linear or concave. 
+
+To understand the implication the curvature has on my predictions, imagine a concave inverse of the marginal cost function as illustrated in Figure XY.
+
+```{r curvature, eval = FALSE, fig.cap="Hypothetical inverse of the marginal cost function", out.width='80%', fig.asp=.75, fig.align='center'}
+include_graphics("images/09_Prediction_Problem.pdf")
+```
+
+Note that it illustrates an agent who finds herself in three different scenarios on the horizontal axis: a situation in which the agent feels treated unkindly, a situation in which she is purely self-interested (or neither treated kindly nor unkindly) as well as a situation in which she feels treated kindly (from left to right). You find the corresponding equilibrium levels of effort provision on the vertical axis where $a$ corresponds to the unkind scenario, $b$ to the neutral one and $c$ to the one in which she feels treated kindly. It is easy to see that the increase of effort provision is smaller than the absolute value of the decrease, $c-b < |b-a|$, despite the fact that the perceived unkindness ($-\lambda \cdot Y_{ij}$) is exactly as strong as the perceived kindness ($\lambda \cdot Y_{ij}$).^[It is straightforward to imagine the cases where the inverse is linear or convex. I therefore skip further examples.] The implication of this observation is that two opposing fairness perceptions of one and the same strength ($\pm \lambda \cdot Y_{ij}$) might result in two different effects that vary in their magnitude -- or to put it more graphically: the red line in Figure XY could very well be concave (steeper to the left and flatter to the right) such that it looks as if it was harder to reciprocate kindness than unkindness (as I sketch it in Figure XY below).
+
+## Interim Conclusion
+
+The two previous sections have illustrated how different assumptions (pure self-interest versus reciprocity) lead to different predictions. In very broad terms, one could summarize the difference as follows: Agents who are purely self interested only care about their material payoffs while reciprocal agents, in contrast, also focus on the intentions of principals. As a consequence, self-interested agents exert the exact same effort in Stage 2 (given the performance-based mechanism) as in Stage 1 while reciprocal agents deviate. 
+
+Imagine a treatment in which an agent is matched with an artificial principal who makes random decisions. According to the model in the previous chapter, such a treatment would not allow for a non-zero psychological payoff because the agent would know that the principal would not have any intentions such that the perceived kindness would be zero. Alternatively one could argue that the agent would have a reciprocity parameter (towards the principal) of $Y_{ij}=0$. In both cases, I would predict that the agent behaves the same way as a purely self-interested agent.
+
+In conclusion, the actual and the hypothetical treatment are distinguished by the fact that reciprocity could potentially exist in the former treatment. To put it differently, subjects in the actual treatment are potentially _exposed_ to reciprocity. Sketching a similar picture as before, Figure XY illustrates the effect of this exposure as a red-shaded area.
+
+```{r effectpred, eval = FALSE, fig.cap="Illustration of the causal effect of reciprocity on the agents' performances", out.width='80%', fig.asp=.75, fig.align='center'}
+include_graphics("images/10_Treatment_Effect_Prediction.pdf")
+```
+
+If one uses the thought experiment and relies on my predictions, one would call this red area the treatment effect or the causal effect of reciprocity on performance. It seems, however, impossible to _observe_ this difference, since our experimental design does not contain a treatment like the one I just described. It is the aim of the next chapter to describe how one can nevertheless _estimate_ the causal effect of reciprocity to ultimately test, whether my predictions of chapter XY bear empiricism.
