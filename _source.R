@@ -2,7 +2,8 @@
 listOfPackages <- c("knitr",
                     "bookdown",
                     "magrittr",
-                    "highcharter"
+                    "highcharter",
+                    "plotly"
 )
 
 newPackages <- listOfPackages[!(listOfPackages %in% installed.packages()[, "Package"])]

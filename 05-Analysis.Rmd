@@ -1,6 +1,7 @@
 # Analysis {#Analysis}
 
 ```{r, echo = FALSE}
-scatter1
+scatter2
+regression
 ```
 
