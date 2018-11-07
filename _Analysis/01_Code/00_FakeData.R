@@ -13,6 +13,15 @@ data$principalPay2 <- round(340 - data$agentPay2 + data$performance,
 data$principalPay2 <- ifelse(test = data$mechanism == "random",
                              yes  = data$principalPay2 - 20,
                              no   = data$principalPay2 - 25)
+data$ratio <- data$performance / data$productivity
+data$percKindness <- ifelse(data$mechanism == "random" &
+                                    data$productivity < 50,
+                            yes = 1,
+                            no = ifelse(data$mechanism == "performanceBased" &
+                                                data$productivity >= 50,
+                                        yes = 1,
+                                        no = 0))
+
 write.csv2(data, 
            file = "_Analysis/02_Data/02_TidyData/FakedDataSet.csv",
            row.names = FALSE)
