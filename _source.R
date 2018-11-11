@@ -21,9 +21,10 @@ for(package in listOfPackages){
 # Analysis -----
 # getwd()
 # list.files("_Analysis/01_Code")
-source("_Analysis/01_Code/01_ReadData.R⁩")
-source("_Analysis/01_Code/02_Analysis.R⁩")
-source("_Analysis/01_Code/03_Visualizations.R⁩")
+source("_Analysis/01_Code/01_ReadData.R")
+source("_Analysis/01_Code/02_Analysis.R")
+source("_Analysis/01_Code/03_Visualization.R")
+
 
 # Create docs folder and nojekyll needed to publish the html output -----
 dir.create("docs", showWarnings = FALSE)
